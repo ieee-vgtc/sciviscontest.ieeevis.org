@@ -1,0 +1,332 @@
+<html><!-- #BeginTemplate "/Templates/Viscontest_frame.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>IEEE Visualization 2006 Design Contest Data Sets</title>
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33337454-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script></head>
+
+<body bgcolor="#222244" text="#FFFFFF" link="#99FFFF" vlink="#0066FF">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr> 
+    <td valign="top" width="222"> 
+      <p align="center"><img src="images/half-vis06_logo.jpg" width="215" height="171"></p>
+      <p align="center"><img src="images/ieee.gif" width="84" height="30" align="absmiddle"> 
+        <img src="images/cs.gif" width="81" height="49" align="absmiddle"><br/>
+      </p>
+      <ul>
+        <li><a href="acknowledgments.html">Acknowledgements</a></li>
+        <li><a href="index.html">Contest Home</a></li>
+        <li class="link"><a href="data.html">Data Description</a></li>
+        <li class="link"><a href="tasks.html">Tasks and Judging</a></li>
+        <li><a href="download.html">Download the Data</a></li>
+        <li><a href="submissions.html">Submissions and Winners</a></li>
+        <li><a href="mail_list_archive.html">Mail-list archive</a></li>
+        <li>Subscribe to mail list</li>
+      </ul>
+      </td>
+    <td valign="top" width="11"></td>
+    <td valign="top" width="531"> <!-- #BeginEditable "body" --> 
+      <div class="left"> 
+        <div style="text-align: center"></div>
+      </div>
+      <div class="right"> 
+        <div class="content"> 
+          <h1>IEEE Visualization 2006 Design Contest</h1>
+          <p>This page describes the format and semantics of the data files for 
+            the contest. See the <a href="download.html">Data Download page</a> 
+            to get copies of the actual data.</p>
+          <h2>Data Set Description for TeraShake 2.1</h2>
+          <p> TeraShake 2.1 represents a physics-based simulation of a magnitude 
+            7.7 earthquake on the Southern San Andreas Fault. In the TeraShake 
+            2.1 simulation, a Mw 7.7 earthquake begins South of Palm Springs and 
+            propagates Northwest on the San Andreas Fault. The rupture begins 
+            at time 0 in the simulation and continues for approximately 60 seconds. 
+            At time 60 seconds, the fault rupture stops but the earthquake waves 
+            continue to propagate throughout the region for several minutes. The 
+            simulation stops at time 250 seconds after the earthquake started 
+            by which time most strong ground motions have subsided. </p>
+          <p>This particular earthquake, a Mw 7.7 Southern San Andreas earthquake 
+            was simulated because such earthquakes are known to have occurred 
+            in the past and they are reasonably likely to occur again. The simulation 
+            results are of significant interest to scientists and the public in 
+            the Southern California region. The simulation produces high resolution 
+            ground motion records for the entire simulation area including the 
+            many large cities in the region. The distribution of strong ground 
+            motions and the levels of ground motion in areas of significant populations 
+            have important societal implications.</p>
+          <p></p>
+          <p>TeraShake 2.1 was performed by propagating earthquake waves through 
+            an anelastic volume using finite difference codes on San Diego Supercomputer 
+            Center (SDSC) DataStar computer. The material characteristics of the 
+            volume are specified prior to running the simulation using the SCEC 
+            Community Velocity Model 3.0, which is a realistic 3D velocity structure 
+            for the region that was developed by SCEC. The edges and the bottom 
+            of the simulation volume are designed to act as absorbing boundaries 
+            to reduce or eliminate reflections of waves as they reach the edges 
+            of the simulation volume. The surface of the ground is treated as 
+            a free surface, not an absorbing boundary. Ground motions at the surface 
+            are of particular interest because that is where people live.</p>
+          <p>This type of simulation has been validated and shown to produce accurate 
+            results for earthquake waves at 0.5Hz and longer periods. Validation 
+            has been done by running similar simulations for historic earthquakes 
+            and comparing the resulting synthetic seismograms produced by the 
+            simulation to the seismograms there were recorded by instruments in 
+            the region during the actual earthquake. </p>
+          <h3>Region</h3>
+          <p><a href="images/region_of_simulation.2.png"><img src="images/region_of_simulation.2.png" width="252" height="223" align="right" border="0"></a>TeraShake 
+            2.1 simulates earthquake propagating through a volume that represents 
+            a region in Southern California. The region used in the TeraShake 
+            simulation is a 600x300x80km3 area of Southern California. The surface 
+            area of this region is shown in to the right (click on the image for 
+            a larger rendition). The geographical origin of this region is Latitude: 
+            34.5, Longitude: -121.0 at depth of 80km. The four coordinates of 
+            the box corners are (121W, 34.5N), (118.9511292W, 36.621696N), (116.032285W, 
+            31.082920N), 113.943965W, 33.122341N).</p>
+          <p>The result is a rectangular region 600 km by 300 km in extent, with 
+            long axis oriented N50W and short axis N40E. We extend the domain 
+            to 80 km depth, well into the upper mantle. The X coordinates increase 
+            moving to the Southeast. The Y coordinates increase moving to the 
+            Northeast. The Z coordinates increase moving up towards the surface. 
+            This is a right-handed coordinate system.</p>
+          <p>The image to the right shows three regions of interest. The largest 
+            (red) region shows the extent of the simulation volume. The smaller 
+            blue region includes the fault zone as well as most of the basins 
+            and the large majority of the populated areas in the simulation region. 
+            The smallest box (black) indicates the Los Angeles area including 
+            the Los Angeles basin. The two smaller regions are of greatest interest 
+            to the scientists for this simulation and visualizations may want 
+            to focus on these areas.</p>
+          <h2>Data Format</h2>
+          <h3>Coordinate System</h3>
+          <p>In this simulation, the region is treated as a flat Cartesian box. 
+            The curvature of the earth and the topography are ignored. This volume 
+            is divided into regular squares with a 200 meter spacing in all directions 
+            in the pre-decimated mesh, creating a 3000x1500x400 point regular 
+            mesh. This results in a mesh consisting of 1.8 billion regular cubes. 
+            Material properties are specified for each cube at the start of the 
+            simulation. The output data is saved as ground velocity for each cube.</p>
+          <p>The region is specified using geographical coordinates to begin. 
+            The geographical coordinates are projected onto a flat surface and 
+            then the geographically-based material properties are determined.<br>
+            Given the geo-referenced material properties, the simulations are 
+            then conducted in the internal mesh coordinate system with point 0,0,0 
+            as the origin at the Southwest corner at the bottom of the volume.</p>
+          <p><b>Time:</b> The original pre-decimated simulation stored the state 
+            of the entire volume every 0.011 seconds. This was calculated for 
+            a total of 250.03 seconds for a total of 22730 time steps.</p>
+          <h3>Data Layout</h3>
+          <p> TeraShake 2.1 output data is time-varying velocity vector data. 
+            All TeraShake 2.1 simulation data is <b>big-endian, 4 byte, IEEE floating 
+            point binary format data</b>. The data is saved in binary files with 
+            no headers. To enable proper interpretation of the data, we specify 
+            the x,y,z dimensions of the mesh, the geo-referenced coordinates for 
+            the mesh, and data types that the floating points represent, the units 
+            of the data, and the order in which the indices change.</p>
+          <p>The TeraShake 2.1 data values are velocity in meters/sec. The velocities 
+            created by the simulation are broken into 3 components (x,y,z) and 
+            are divided into files by component and time step. Thus, there are 
+            3 files (x,y,z) for each time step.</p>
+          <p> There are two types of TeraShake 2.1 data presented here: Volumetric+time 
+            output wave-propagation data and Volumetric input-mesh data. </p>
+          <h4>Volumetric Wave-Propagation Data Sets</h4>
+          <p>The 4D volumetric velocity data represents the vector velocity state 
+            at each point in the volume throughout the simulation. This type of 
+            data provides insights into the subsurface paths along which the earthquake 
+            waves propagate. Because of the large storage requirements, this data 
+            has been decimated in both space and time to produce the data sets 
+            for the visualization contest. The 4D volumetric data is decimated 
+            by 100 in time (1 volume every 1.1 seconds) and is decimated by a 
+            factor of 4 in each spatial dimension. The resulting volume meshes 
+            are <b>750x375x100 in space for a total of 28,125,000 cubes per time 
+            step and a total of 227 time steps</b>.</p>
+          <p>There are 227 files for each component (x,y,z) for a total of 681 
+            files. Each file represents a single velocity component for a volume 
+            of earth at a particular time in the simulation. These reduced volume 
+            files are named TS21z_<i>Component</i>_R2_<i>Timestep</i>.bin (for 
+            example, TS21z_X_R2_008000.bin corresponds to time-step 80 seconds 
+            for the X velocity data).</p>
+          <p>The data in these are 4-byte floats ordered such that the x index 
+            varies fastest, then y, then z. Therefore, floats in the file will 
+            be ordered like this:</p>
+        </div>
+      </div>
+      <blockquote> 
+        <div class="right"> 
+          <div class="content"> 
+            <p>X Mesh Coordinate, Y Mesh Coordinate, Z Mesh Coordinate<br>
+              0,0,0 &lt;--- 1st 4 bytes of data are for this coordinate<br>
+              1,0,0 &lt;--- 2nd 4 bytes of data are for its neighbor in x<br>
+              2,0,0<br>
+              ...<br>
+              749,0,0<br>
+              0,1,0<br>
+              1,1,0<br>
+              2,1,0<br>
+              ...<br>
+              749,374,0<br>
+              0,0,1<br>
+              1,0,1<br>
+              2,0,1 <br>
+              ... <br>
+              749,374,99</p>
+          </div>
+        </div>
+        <div class="right"> 
+          <div class="content"><b>Other Information:</b><br>
+            250.00 TMAX = propagation time (.011 x 22730)<br>
+            800.00 DH = spatial step for x, y, z (meters)<br>
+            1.1 DT = time step (seconds) <br>
+            750 NX = x model dimension in nodes<br>
+            375 NY = y model dimension in nodes<br>
+            100 NZ = z model dimension in nodes</div>
+        </div>
+      </blockquote>
+      <div class="right"> 
+        <div class="content"> 
+          <h4>Volumetric Input-Mesh Data Set</h4>
+          <p> <a href="images/VS_2500_zoomed_out_annotated.2.png"><img src="images/VS_2500_zoomed_out_annotated.2.png" width="404" height="356" align="right" border="0"></a>The 
+            material characteristic (stiffness) of the volume through which the 
+            waves propogate is specified prior to running the simulation using 
+            a 3D model of the Southern California region, derived from the SCEC 
+            Community Velocity Model 3.0. The file <b><i>TS21VelocityMesh_VS_R2.bin</i></b> 
+            contains a scalar field representing material stiffness properties 
+            from this simulation, and it is used to determine basins and other 
+            features of interest against which the wave-propagation data will 
+            be compared. This data set determines the type of material at each 
+            voxel.</p>
+          <p>The data set that we have represents the &quot;S-wave velocity magnitudes&quot; 
+            that the scientists believe describe the geology in Southern California. 
+            This is a scalar field that is related to the stiffness of the material.</p>
+          <p>Basins are regions in the data with a VS value of &lt;2500; when 
+            we do an isosurface at that level, it shows several sloped indentations 
+            in the data set that look like basins, as seen in the image to the 
+            right. These are the basis for the various domain-science questions 
+            that ask about the behavior of waves in and around basins. The particular 
+            basins of interest are labeled. Click on the image for a larger rendition. 
+            A map of the basin locations with respect to land features can be 
+            found on the <a href="tasks.html">Tasks and Judging</a> page.</p>
+          <p>The format of this volume data set is the same as that of the Volumetric 
+            Wave_Propagation Data Sets listed above.</p>
+          <h4>Deriving your own data sets</h4>
+          <p>Further processing of data into displacement, or calculation of data 
+            types such as gradient, divergence, and curl are possibly of use in 
+            displaying answers to the scientists' questions. The frequency contents 
+            of the original and decimated data should be considered if such processing 
+            is considered.</p>
+          <h2>Sample Readers and Converters</h2>
+          <p><a href="images/example_vtk_slice0.jpg"><img src="images/example_vtk_slice0.jpg" width="191" height="126" align="right" border="0"></a>As 
+            part of the data validation process, Tcl scripts were created to load 
+            the data into the open-source Visualization ToolKit (<a href="http://www.vtk.org">VTK</a>). 
+            The first script (<a href="https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2006/Data/vtk_read_and_convert_x.tcl">available 
+            here</a>) converts one of the X data sets into a VTK-format volumetric 
+            scalar-field data set. The second script (<a href="https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2006/Data/vtk_read_and_display_x.tcl">available 
+            here</a>) will load one of the X data sets into VTK and display it 
+            using an image viewer. Very small thumbnail images of slices 0 and 
+            99 can be seen to the right. Click on them to get a full-sized image. 
+            The displayer reads from the bin file rather than the VTK file so 
+            that you can see how to put together a full chain of VTK commands 
+            to read directly from the raw files.</p>
+          <p><a href="images/example_vtk_slice99.jpg"><img src="images/example_vtk_slice99.jpg" width="191" height="126" align="right" border="0"></a>These 
+            scripts are included here to provide concrete examples of how to load 
+            or convert this data. Note that the script needs to be run from the 
+            same directory as the data file named &quot;TS21z_X_R2_008000.bin&quot; 
+            or else the name of the file to be loaded must be changed in each 
+            script. Note that the data files from SDSC do not have the &quot;.bin&quot; 
+            extension on them. They are compressed with Gzip and must be uncompressed 
+            before being loaded by these scripts.</p>
+          <p>Note that the image data is inverted around the Y axis when it loaded 
+            into VTK to make it match the simulation data space (although the 
+            VTK viewer is right-handed like the data itself, the image reader 
+            assumes a left-handed image file format whose origin is at the upper-left 
+            corner of the image).</p>
+          <p>Another script has been created to load the Velocity Progagation 
+            Input Mesh data (<a href="https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2006/Data/vtk_read_and_convert_VS.tcl">available 
+            here</a>). It brings the data into the same space as the time-dependendent 
+            data above.</p>
+          <h2>What the data should look like when properly loaded</h2>
+          <p>The best place to look to get an understanding of the structure of 
+            the data is <a href="http://visservices.sdsc.edu/projects/scec/terashake/2.1">TeraShake 
+            2.1 Visualization web page</a>. This page contains still shots and 
+            videos of the earthquake in action. These videos are for reference 
+            only: their authors are are not eligible to submit to the contest. 
+            Note that some videos on that page show derived data (summed displacement 
+            rather than instantaneous velocity). The visualization of this data 
+            set to date have been almost exclusively surface-based. They went 
+            to a lot of trouble to store all of the volumetric data, and they 
+            have questions about volumetric effects, so this is our chance to 
+            show them new things they have not yet ever seen!</p>
+          <p>The image below shows a view from VTK of two isosurfaces, one at 
+            -0.02 and one at 0.02 in the TS21z_X_R2_008000.bin file (click on 
+            the image for a larger view). This represents the x component of the 
+            instantaneous velocity for the TeraShake 2.1 sample dataset at time 
+            step 80. The viewpoint here looks up from below the data set, with 
+            X increasing to the right, Y towards the back, and Z up. The positive 
+            isosurface is colored red and the negative is blue. This is not necessarily 
+            a recommended technique, but is provided to let you see if the orientation 
+            of your conversion matches the actual data's orientation.</p>
+          <p><a href="images/isosurface_example_view.jpg"><img src="images/isosurface_example_view.jpg" width="484" height="367" border="0" align="bottom"></a></p>
+          <p>Sample images of a top down view of data as visualized by Marcus 
+            Thiebaux of the TeraShake 2.1 sample dataset for time step 80 are 
+            available. There is an <a href="images/Tera-Shake-2.1-X.s00.jpg">X 
+            data set</a>, a <a href="images/Tera-Shake-2.1-Y.s01.jpg">Y data set</a>, 
+            and a <a href="images/Tera-Shake-2.1-Z.s02.jpg">Z data set</a> view 
+            of the top layer (ground level) seen in the isosurface image. These 
+            two images also include an overlay of the California border and the 
+            California highways data sets described in the metadata section below. 
+            The X image is drawn below.</p>
+          <p><a href="images/Tera-Shake-2.1-X.s00.jpg"><img src="images/Tera-Shake-2.1-X.s00.jpg" width="512" height="256" border="0"></a></p>
+          <p><a href="images/input-Vs-mesh.png"><img src="images/input-Vs-mesh.png" width="147" height="124" align="right" border="0"></a>The 
+            input volumetric data set is displayed in a spinning volume rendering 
+            with different surfaces shown in <a href="http://visservices.sdsc.edu/projects/scec/terashake/conceptual/movies/Vs-input-mesh-rotation.mov">a 
+            movie created by Amit Chourasia</a>. If that link doesn't work, look 
+            for the image to the right and view the movie associated with it on 
+            the following web page: <a href="http://visservices.sdsc.edu/projects/scec/terashake/conceptual">http://visservices.sdsc.edu/projects/scec/terashake/conceptual</a>. 
+            Click on the image for a larger rendition.</p>
+          <h2>Metadata</h2>
+          <p><a href="images/lines.jpg"><img src="images/lines.jpg" width="320" height="240" align="right" border="0"></a>Two 
+            additional data sets are available in case they are useful. They are 
+            a <a href="https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2006/Data/ca_border_flipped.asc">map of the California border</a> 
+            (shown in blue in the three sample images above) and a <a href="https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2006/Data/ca_hiwys.main.asc">map 
+            of California highways</a> (shown in red in the sample images above). 
+            These are ASCII-formatted files that contain one or more segments 
+            with X and Y coordinates in lattitude and longitude. Lattitude is 
+            listed first on each line in both files. The data from these files, 
+            when plotted, should look like the image to the right.</p>
+          <p><b>Registration:</b> Remember that the data is rotated 40 degrees, 
+            as described under the Region section of this document; this must 
+            be taken into account when aligning the maps with the data sets. Also, 
+            the simulation grid is a rectangular approximation to the curvilinear 
+            grid in which lat/long are specified, so registration is slightly 
+            off. Below is the fit used by Marcus Thiebaux to align them. 40 degrees 
+            is the geographic angle, but 39.5 is part of a linear approximation 
+            to do a best-fit of the data..</p>
+        </div>
+      </div>
+      <blockquote>
+        <div class="right">
+          <div class="content"> rotate euler 0.0 0.0 39.5<br>
+            scale 0.1539 0.183 1.0<br>
+            translate 121.000000 -34.500000 0.133333</div>
+        </div>
+      </blockquote>
+      <div class="right">
+        <div class="content"></div>
+      </div>
+      <!-- #EndEditable --></td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

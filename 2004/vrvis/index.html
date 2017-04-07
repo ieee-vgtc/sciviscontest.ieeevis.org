@@ -1,0 +1,632 @@
+<html><head><title>Interactive Visual Analysis of Hurricane Isabel with SimVis</title><script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33337454-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script></head>
+<body alink="#1111ee" bgcolor="#ffffff" link="#00bb00" text="#0000bb" vlink="#007700">
+
+<table bgcolor="#ffffff" border="0" cellpadding="8" cellspacing="5" width="100%">
+
+<tbody><tr bgcolor="#eeeeee"><td colspan="3" align="center"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+        <td><a href="images/logo1_big.png"> <img src="images/logo1_small.png" valign="middle" align="right" border="0" height="128"></a></td>
+        <td><font size="+3">   </font></td>
+        <td align="center"><strong><font size="+2">IEEE Visualization 2004 Contest Entry</font><br><font size="+3">Interactive Visual Analysis of Hurricane Isabel with SimVis</font><br><br><font size="+1"><a href="mailto:Doleisch@VRVis.at">Helmut Doleisch</a>, <a href="mailto:Muigg@VRVis.at">Philipp Muigg</a>, and 
+             <a href="mailto:Hauser@VRVis.at">Helwig Hauser</a><br>VRVis Research Center, Vienna, Austria</font></strong></td>
+        <td><font size="+3">   </font></td>
+        <td><a href="images/logo2_big.png"> <img src="images/logo2_small.png" valign="middle" align="right" border="0" height="128"></a></td></tr></tbody></table>
+    </td>
+</tr>
+
+<!-- *********************************************************** -->
+
+
+<tr bgcolor="#eeeeee" valign="top"><td><font size="+1"><strong>Abstract</strong>:</font>
+    </td>
+    <td colspan="2"><p> 
+SimVis is an interactive visual analysis technology for multi-variate and time-dependent
+3D simulation data on unstructured grids, which has been developed at the 
+VRVis Research Center in Vienna, Austria, in the past few years.  The SimVis 
+approach to visual exploration and analysis of flow simulation data is based on 
+(a) interactive feature specification through interactive brushing in data views 
+of various kind (scatterplots, histograms, and others), (b) a smooth approach to 
+feature specification (similar to fuzzy classifications), (c) an intelligent way 
+of extending and combining brushes to access complex data inter-relations, 
+(d) focus-plus-context 3D visualization for spatial orientation, etc. . 
+In the course of the Visualization Contest 2004 (IEEE Visualization 2004), 
+SimVis has been used to interactively explore and analyze the simulated hurricane Isabel.  
+With only a few extensions such as new color maps, for example, and after 
+sub-sampling the data to allow interactive visualization on a regular PC, it was 
+possible to effectively investigate the high-dimensional and complex dataset.  
+With SimVis it is possible to instantly access all the data dimensions, including 
+3D space, time, and about a dozen of data attributes concurrently and in an integrated manner.  
+<br>
+<!--
+Below we describe (1) preprocessing steps which enabled the efficient investigation, 
+(2) interesting SimVis-opportunities for the interactive exploration and analysis from a methodological stand point, (3) the actual exploration and analysis of Isabel by means of SimVis and our findings, and (4) our own view in how far we met the requirements of the contest as well as conclusions we can draw from this case study. 
+-->
+
+
+       </p>
+    </td>
+</tr>
+
+
+<!-- *********************************************************** -->
+
+
+<tr bgcolor="#eeeeee" valign="top"><td><font size="+1"><strong>PDF</strong>:</font>
+    </td>
+    <td colspan="2"><p> 
+       
+       <a href="IsabelWithSimVis.pdf">A 2-pages PDF-Document</a> is available giving a brief discussion and overview about the 
+       interactive visual analysis and exploration session. More information is given below next to the images for each analysis step. 
+       </p>
+    </td>
+</tr>
+   
+
+
+<!-- *********************************************************** -->
+<!-- *********************************************************** -->
+
+
+<tr bgcolor="#eeeeee" valign="top"><td><font size="+1"><strong>Videos</strong>:</font>
+    </td>
+    <td align="left"><a href="vrvis.avi"><img src="images/slide1_small.png"></a></td>
+    <td align="left" valign="top">
+The video, that can be accessed through the thumbnail on the left  briefly shows
+how the hurricane dataset can be interactively explored and analyzed with the SimVis
+system.</td>
+</tr>
+
+
+<!-- *********************************************************** -->
+
+
+<tr bgcolor="#eeeeee" valign="top"><td><font size="+1"><strong>Interactivity</strong>:</font>
+    </td>
+    <td colspan="2"><p> 
+<!-- The SimVis system is a solution that mainly relies on its ability to provide its
+users with highly interactive means of data exploration which is accomplished by
+a multiple linked view setup in which different data selections
+can be specified, viewed and compared in realtime. The views mainly used in this entry are
+multiple scatterplots whose selections can be combined by logical operations
+and a 3D rendering view which displays the data items in its spatial context.
+-->
+
+The software runs interactively on a standard PC containing the following components:
+<br>
+CPU: Intel P4 3.0 GHz (800MHz frontside bus)
+<br>
+Ram: 2GB DDR Memory (400MHz)
+<br>
+Harddisk: 2x 80Gb in a raid 0 setup
+<br>
+Graphics Card: GeforceFX 5950 (256Mb RAM)
+<br>
+<br>
+In order to prepare the dataset for the SimVis system it had to be downsampled.
+We decided to generate one relatively low resolution dataset (100x100x20)
+containing 24 timesteps that was used
+during the interactive analysis, which contained all the data channels that
+were supplied and additionally the following derived attributes:
+<br>
+</p><ul>
+<li>
+horizontal flow angle
+</li>
+<li>
+vertical flow angle
+</li>
+<li>
+flow velocity
+</li>
+<li>
+horizontally normalized temperature
+</li>
+<li>
+horizontally normalized pressure
+</li>
+<li>
+spatial difference of the cloud channel
+</li>
+<li>
+spatial difference of the flow velocity
+</li>
+<li>
+spatial difference of the horizontally normalized temperature
+</li>
+<li>
+spatial difference of the horizontally normalized pressure
+</li>
+</ul>
+<br>
+Furthermore we made several additional datasets containing the same attributes
+but only one single timestep at a resolution of 250x250x50 to produce the images
+that can be seen below. The rendering of those datasets was still interactive at
+a framerate of approximately 15 frames per second.
+<br>
+The video capturing software (Camtasia Studio) that was used to grab the screen during the
+visualizations ran in the background on the same PC and was not able to grab all
+frames that were displayed in the 3D-rendering view. Thus the framerate
+during interactions shown in the video is far less than the actual performance of the system. On
+average around 45 frames per second can be achieved in the subsampled dataset
+that was used for the interactive demonstration. The update after a data
+selection change is roughly 0.5 seconds.
+
+
+
+       
+    </td>
+</tr>
+
+
+<!-- *********************************************************** -->
+
+<!-- *********************************************************** -->
+
+
+<tr bgcolor="#eeeeee" valign="top"><td><font size="+1"><strong>Exploratory Support</strong>:</font>
+    </td>
+    <td colspan="2"><p> 
+The SimVis System supports multiple ways to explore a given dataset. Firstly it 
+provides a basic overview over the spatial distribution of the data cells in the 
+3D rendering view. Here a transfer function can be applied to one selectable data 
+channel. The opacity that is assigned to every rendered data cell is specified by the 
+degree of interest that the user has specified for it. This specification of a region
+that should be in focus is one of the most central parts of SimVis since interacting 
+with the system mostly means refining extending or modifying those regions. This can 
+be done in multiple linked views like Histograms and Scatterplots by brushing data items 
+that should be emphasized in the 3D view. Besides standard brushing (resulting in a binary classification 
+of the data) also smoothly brushing data values is enabled, to account for the 
+normally smooth distribution of data values in flow datasets.
+<br>
+Another approach that can be taken with SimVis to explore and analyze especially 
+high dimensional datasets is to use the different InfoVis views, e.g. scatterplots, to 
+view the distribution of the already selected data items in different attribute spaces. 
+This can help to find correlations and other dependencies that might provide 
+interesting and important information.
+
+
+
+       </p>
+    </td>
+</tr>
+
+
+
+<!-- *********************************************************** -->
+
+<tr bgcolor="#eeeeee" valign="top"><td rowspan="11"><font size="+1"><strong>Results from Interactive Analysis</strong>:</font>
+    </td>
+    <td align="left">
+        <img src="images/slide2_cloudoverview_small.png">
+        <br>
+        <br>
+        <img src="images/clouds_ts10_small.png">
+        
+    </td>
+    <td align="left" valign="top">
+        This portion stands at the beginning of our exploration and analysis of
+the hurricane Isabel. In order to gain a rough understanding of the activity that happened
+during the course of the simulation the first feature we selected was the lowest layer of the
+dataset with a high interest on the portions that are over land. This was
+accomplished by utilizing the data attribute height which represents the
+absolute height of the data cell and the height over surface which is computed by
+subtracting the surface height from the actual sea level height. The second step
+was to overlook the structure of the hurricane and its
+surrounding weather by selecting data cells containing some form of clouds as
+the second feature that is visible in this video. 
+<br>
+After the specification of those two features the exploration through the time dimension
+can easily be accomplished by stepping through the single timesteps in the 3D
+view.
+<br>
+Now that a basic understanding of the cloud structures has been gained, further
+analysis can be carried out by focusing on the question if clouds can be found
+in regions of high flow velocity. This can be achieved by simply selecting
+portions of the data set that contain high velocity and clouds. Furthermore the
+velocity is mapped to color in the 3D view. Again by stepping through the time
+dimension, further insight into the data can be gained. It can be shown, that the
+clouds surrounding the center of the hurricane are within regions of extremely
+high velocities. What can be witnessed as well is a cloud gap in this thick wall
+of clouds about 34 hours after the start of the simulation, that will be discussed
+later on in more detail.
+<br>
+After examining those clouds near the center an overview over other cloud
+portions in calmer regions of the dataset can be made by now selecting clouds
+in cells exhibiting low flow velocity. This selection now clearly shows the 
+rainbands that form around the hurricane at three different fronts which will be
+discussed in another video more closely. Those clouds can be classified as
+Cumolonimbus, which exhibit the typical towering structure with a slight
+overcast.
+        
+        
+    
+   </td>
+</tr>
+
+<tr bgcolor="#eeeeee" valign="top">
+    <td align="left">
+        <img src="images/slide3_supercooled_small.png">
+        <br>
+        <br>
+        <img src="images/supercooledclouds_ts10_small.png">
+    </td>
+    <td align="left" valign="top">
+Now that the structure of the cloud systems has been examined we wanted to take a
+look at the factors that lead to or accompany cloud formation. Upwinds are quite
+necessary for the generation of the anvil like structure of the Cumolonimbus
+Clouds that have been selected at the end of the last video part and so we
+changed the flow velocity channel in the scatterplot that selected those clouds
+to the vertical wind component w. The thin green line marks the zero axis and
+so it can be seen, that our present selection, which is marked as current
+entries into the scatterplot, mostly lies above this line. 
+<br>
+Then the cells exhibiting updraft are selected. In order to concentrate on the 
+lower regions of the atmosphere which seems to play a big part in the process of 
+cloud creation the selection is limited to those portions of the dataset. Again
+the rainbands can be recognized easily. Furthermore the asymmetry of the
+updraft regions around the eye are quite interesting. It seems that the gap that
+was visible in the high velocity clouds selection from the previous video is
+visible here as well. Cloud creation is normally hinderd by downdrafts and for
+now we assume, that in this region near the center of the hurricane such
+downward winds reduce cloud generation or even dissipate them. In a later
+video about up- and downdrafts we will discuss this in more detail.
+<br>
+Besides the aformentioned phenomenom we were interested in some other commonly
+known cloud properties like the existence of supercooled water which should
+exist in relatively large quantities in clouds of the proportions witnessed in 
+this dataset. To test this we simply set the scatterplot to show the temperature 
+and the "qcloud" channel, which describes cloud portions made up of liquid
+water. Here we can again test our previous selection against those two new
+data attributes by examining the distribution of seleced (red) portions in the scatterplot. We see, that
+we already selected some supercooled water, but that the biggest portion of our
+selection was above the freezing point, which is marked by the thin green line.
+The cause for this is, that we previously limited our selection to relatively
+low atmospheric regions. Our new selection will now encompass only the portions
+of the dataset containing liquid cloud water in regions below freezing point.
+This new selection shows that our assumptions were true and that we can find
+large batches of cells that satisfy this criteria at the rainbands and near the
+hurricane center a few kilometers above ground. In this height the asymmetry of
+the center is again very easily visible.
+        
+   </td>
+</tr>
+
+<tr bgcolor="#eeeeee" valign="top">
+    <td align="left">
+        <img src="images/slide4_fronts_small.png">
+        <br>
+        <br>
+        <img src="images/frontscloud_ts48_small.png">
+        <br>
+        <img src="images/frontsnormtemp_ts48_small.png">
+        <br>
+        <img src="images/frontsupwind_ts48_small.png">
+        
+    </td>
+    <td align="left" valign="top">
+In this step of the analysis we wanted to get an overview over the fronts that exist within
+this dataset and how they evolve over time. First we wanted to focus on the
+lower portions of the atmosphere. Along a front air with one
+characteristic normally pushes air with another characteristic away which
+often results in up and down drafts as one air mass either moves over or forces
+itself under another air mass. So we selected data regions where the wind is
+either moving up- or downwards and applied the color mapping in the 3D view to
+the vertical wind channel. Furthermore we windowed extreme up and down drafts out
+by using a custom scale for the color map. Exploring the time dimension with
+this selection the front structure can already be seen by looking after brightly
+red colored regions. Still the whole visualisation is visually cluttered a lot
+since too much of the data is selected. Thus we refined the selection by
+additionally brushing regions of high humidity and thereby were able to flesh out
+the previous selection. Now the leading warm front and the following cold front
+can be seen. Between those two fronts the relatively humid warm sector of the storm
+system is visible. Furthermore a third front in the north of the hurricane can
+be recognized  which weakens relatively early in the progress of the simulation.
+        
+   </td>
+</tr>
+
+<tr bgcolor="#eeeeee" valign="top">
+    <td align="left">
+        <img src="images/slide5_convection_small.png">
+        <br>
+        <br>
+        <img src="images/shockwaves_ts10_small.png">
+        
+    </td>
+    <td align="left" valign="top">
+The setup that was already prepared in the previous video can now be used to
+explore and analyze the convectional cells within the hurricane since up- and downdrafts 
+have been selected and color coded in the 3D view. Updrafts are
+represented as dark blue to red and downdrafts green to orange. After removing
+the humidity constrain and selecting more height slices of the dataset the
+shading function of the 3D view is enabled to additionally clarify the spatial
+distribution of the degree of interest the selection imposes onto the data.
+Convective cells can now easily be recognized by looking for regions of updrafts
+neighboring those of downwards wind movement. 
+<br>
+By examining the time dimension
+the very early generation of a storm cell over Florida can be witnessed, which
+takes place even before the main rainbands evolve. Furthermore, this
+visualization shows very strong convective bands spiraling out from the center
+of the hurricane (and to a lesser degree from the storm over florida). During
+our investigation we did not find any phenomenom matching those bands. Still we
+wanted to mention it, since those bands are so easily recognizable. 
+<br>
+In order to gather more insight into the convective activity of the hurricane
+near its center we again refined our selection by brushing only cells within a
+certain spatial location which resulted in the selection of a slice of
+the dataset. By moving the brush in the lower right scatterplot the position of
+this slice can be changed interactively. Additionally regions of high velocity are selected and
+thus only areas outside the eye can be examined. In this visualization the cause
+for the gap in the clouds that was mentioned in the description of the first
+video can be seen quite clearly. Air is flowing downward in a very narrow
+channel and thus hinders cloud formation at this part of the hurricane. Besides
+this, multiple small convective cells can be seen in the selected slice right
+next to the eye wall.
+        
+   </td>
+</tr>
+
+<tr bgcolor="#eeeeee" valign="top">
+    <td align="left">
+        <img src="images/slide6_eye_small.png">
+        
+        
+    </td>
+    <td align="left" valign="top">
+The eye of the hurricane is one of the most prominent features of this kind of
+storm. Thus it is quite easy to find and select with the SimVis system. In this
+video the horizontally normalized pressure data channel is used in combination
+with the flow velocity channel to select portions of the data set that make up
+the eye of the hurricane by brushing low velocity and pressure regions. The
+funnel-like structure of the eye can clearly be seen when the view is tilted a
+little. Since the hurricane is a tropical low it has a warm core which is shown
+in the following selection on the horizontally normalized temperature and
+pressure. Since the shading is not calculated again for the new
+selection of the warm center of the storm, the spatial outline of the previous selection
+can be compared to the current one.
+         
+   </td>
+</tr>
+
+<tr bgcolor="#eeeeee" valign="top">
+    <td align="left">
+        <img src="images/slide7_percipitation_small.png">
+        
+    </td>
+    <td align="left" valign="top">
+At the beginning of this video the eye is selected for a better overview over
+the dataset. Furthermore vapor is mapped to color in the 3D view. In the first
+exploration phase it is quite appearant that precipitation leads to low humidity
+and thus a low amount of vapor in the air, as can be witnessed especially above
+Florida as the rainbands evolve. Now the actual precipitation is mapped to color
+and portions of high precipitation are selected in the top right scatterplot
+revealing the actual amount and the heights where precipitation originates at.
+Again, as in some of the previous videos, a strong asymmetry around the eye can
+be witnessed since the biggest part of our selection lies just a bit north
+of the center. In order to gain a better overview of the situation at ground
+level the height is limited to the lowest slice of the dataset. Additionally
+very high precipitation values that mostly occur in greater heights are windowed
+out by using a custom scale for the color map. With this selection the amount of
+precipitation can be conveniently tracked over time.
+
+            
+   </td>
+</tr>
+
+<tr bgcolor="#eeeeee" valign="top">
+    <td align="left">
+        <img src="images/slide8_temperature_small.png">
+        
+    </td>
+    <td align="left" valign="top">
+The temperature from ground level to about one km height prooved to be the
+most interesting in the course of our exploration, since the most information can
+be gained from it. Firstly, this video shows how the degree of interest is
+focused on relatively warm and relatively cold portions of the data in the
+lowest slice of the dataset. Then the time dimension is analyzed timestep by
+timestep. This visualization clearly shows the warm sector, the leading warm
+front, and the following cold front of the storm system. Furthermore, the weak
+warm front and its slow dissipation north of the storm can be witnessed. Besides
+those findings it can also be seen that the air over land is cooling rapidly at
+nightfall and is warming up only slowly on the next day. Furthermore the
+injection of very cold air into the storm system at landfall quickly cools down
+the storm center.
+           
+   </td>
+</tr>
+
+<tr bgcolor="#eeeeee" valign="top">
+    <td align="left">
+        <img src="images/slide9_topology_small.png">
+        <br>
+        <br>
+        <img src="images/topology_ts10_skizze_small.png">
+        <br>
+        <img src="images/topologyvelocity_ts10_small.png">
+        <!--<br/>
+        <a href="images/topologycomplex_ts10_big.png"><img
+src="images/topologycomplex_ts10_small.png"></a>-->
+
+    </td>
+    <td align="left" valign="top">
+In order to explore and analyze the topology of the flow within the data set
+the wind velocity direction was converted into a horizontal and
+vertical angle in a preprocessing step. Then the feature specification was
+carried out on the horizontal angle by combining six 20 degree wide selections
+at -60°, 0°, 60°, 120°, 180°, 240° and 300°. The resulting bands of selected
+data now represented areas where the wind moves in roughly the same direction.
+To further enhance the perception in the 3D view a circular color map has been
+included which contains all fully saturated colors from the HSV color scale.
+Pure colors (red, green blue, cyan, magenta, yellow) exactely match the
+centers of our six selections and thus can be used to distinguish between the
+different bands.
+<br>
+With this setup the flow within the dataset can be observed and overviewed
+conveniently. Vortices and saddle points can be located by looking for points
+where all six selected bands meet. In order to distinguish vortices from saddles,
+the order of the colors has to be considered. If a vortex lies around the point 
+of interest, the different bands, which have to be viewed in a clockwise order,
+must be colored like the color scale downwards. To detect whether it is a
+cyclonic or anticyclonic vortex the location of the bands has to be checked. A
+cyclonic vortex, like the hurricane itself, always has its green band at the
+east while anticyclonic vortices have theirs on the west side. Every point of
+interest that is no vortex is a saddle.
+<br>
+With this knowledge we examined the dataset and realized that there
+are some vortices and saddle nodes besides the hurricane itself. Those are
+rather weak and mostly confined to thin layers of the atmosphere. The only
+exception to this is a saddle node and an anticyclonic vortex that can be
+witnessed at about 13 km height. The saddle and the anticyclone seem directly 
+connected to the main vortex of the hurricane and are also moving together as
+time progresses.
+            
+   </td>
+</tr>
+
+<tr bgcolor="#eeeeee" valign="top">
+    <td align="left">
+        <img src="images/slide10_pressure_small.png">
+        <br>   
+        <br>     
+        <img src="images/pressureiso_ts20_small.png">
+
+    </td>
+    <td align="left" valign="top">
+The extremely low central pressure within the center of a hurricane is, like its
+eye, another very impressing characteristic of such storm systems. In order to
+visualize this we made several small selections in the pressure data attribute
+to generate the impression of iso-surfaces. By stepping through time
+the extreme stability of this low pressure system can be witnessed.
+        
+   </td>
+</tr>
+
+
+<tr bgcolor="#eeeeee" valign="top">
+    <td align="left">
+        <img src="images/slide11_eyewall_small.png">
+        <br>  
+        <br>      
+        <img src="images/eyewallshaded_ts20_small.png">
+
+    </td>
+    <td align="left" valign="top">
+The eyewall is the border between the calm eye and its inhospitable
+surroundings. To extract this border from the data we had to spatially derive
+the wind velocity in a preprocessing step. Next we selected portions of the data
+that were in regions with low horizontally normalized pressure and exhibit high
+spatial velocity differences. 
+        
+   </td>
+</tr>
+
+
+<tr bgcolor="#eeeeee" valign="top">
+    <td align="left">
+        <img src="images/slide12_classification_small.png">
+        <br>   
+        <br>     
+        <img src="images/eyequadrantveliso_small.png">
+
+    </td>
+    <td align="left" valign="top">
+To classify the hurricane during the simulated timespan we decided to map the
+wind velocity to a discrete colorscale which assigns the categories
+of a tropical cyclone to different colors. In order to gain further insight into
+the velocity distribution near the center of the storm we used the horizontal wind
+direction angle and the horizontally normalized pressure to specify only a slice
+of the highest velocity regions. By tracking the hurricane center throughout the
+course of the simulated timespan the classification into the different
+categories can be easily made by looking up the corresponding entries in this
+list:
+<br> 
+<img src="images/classificationscala.png">
+<br> 
+<br> 
+
+<br> 
+           
+   </td>
+</tr>
+
+
+
+       
+       
+
+<!-- *********************************************************** -->
+
+
+
+
+<tr bgcolor="#eeeeee" valign="top"><td><font size="+1"><strong>Related Work</strong>:</font>
+    </td>
+    <td colspan="2"><p> 
+
+	<table border="0" cellpadding="8" cellspacing="5" width="100%">
+		<tbody><tr bgcolor="#cccccc"> 
+		  <td align="center">
+		  <strong>Related Projects at VRVis</strong>
+		  </td>
+		  <td align="center">
+		  <strong>Key-References related to this Project</strong>
+		  </td>
+		</tr>  
+	
+		<tr bgcolor="#cccccc"> 
+		  <td align="left">
+		  	<ul>
+		  	  <li><a href="http://www.vrvis.at/vis/research/diesel-case/">Case Study: Visual Analysis of Complex, Time-Dependent 
+		  	  	Simulation Results of a Diesel Exhaust System</a></li>
+		  	  <li><a href="http://www.vrvis.at/vis/research/fdl-vis/">Interactive Feature Specification for Focus+Context Visualization
+		  	  	of Complex Simulation Data</a></li>
+		  	  <li><a href="http://www.vrvis.at/vis/research/smooth-brush/">Smooth Brushing for Focus+Context Visualization of
+		  	  	Simulation Data in 3D.</a></li>
+		  	</ul>
+		  	
+		  	General information about the SimVis system is available at <strong><a href="http://www.vrvis.at/SimVis/">http://www.VRVis.at/SimVis/</a></strong>
+		  </td>
+		  <td align="left">
+		  	<ul>
+		  	  <li>Helmut Doleisch, Michael Mayer, Martin Gasser, Roland Wanker, and Helwig Hauser<br>Case Study: Visual Analysis of Complex, Time-Dependent 
+		  	  	Simulation Results of a Diesel Exhaust System.
+		  	  	In <em>Proc. of the 6<sup>th</sup> Joint IEEE TCVG - EG Symposium 
+		  	  	of Visualization (VisSym 2004)</em>, pages 91-96, 2004.</li>
+		  	  <li>Helmut Doleisch, Martin Gasser, Helwig Hauser. <br>Interactive Feature Specification for Focus+Context Visualization
+		  	  	of Complex Simulation Data. 
+		  	  	In <em>Proc. of the 5<sup>th</sup> Joint IEEE TCVG - EG Symposium 
+		  	  	of Visualization (VisSym 2003)</em>, pages 239-248, 2003.</li>
+		  	  <li>Helmut Doleisch and Helwig Hauser. <br>Smooth Brushing for Focus+Context Visualization of Simulation 
+		  	  	Data in 3D.
+		  	  	In <em>Journal of WSCG</em>, 10(1):147-154, 2002.</li>
+		  	</ul>
+		  
+		  </td>
+		</tr>  
+	
+	</tbody></table>
+
+       </p>
+    </td>
+</tr>
+
+
+
+
+<!-- *********************************************************** -->
+
+</tbody></table>
+</p>
+</body></html>

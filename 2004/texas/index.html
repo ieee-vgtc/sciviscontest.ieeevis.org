@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+<link rel="stylesheet" type="text/css" href="images/xhtml.css" media="screen">
+
+<meta name="description" content="IEEE Visualization 2004 Contest Information" lang="en">
+<meta name="keywords" content="scientific visualization, Visualization 2004, contest"><title>IEEE Visualization 2004 Contest</title><script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33337454-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script></head>
+
+
+<body>
+
+    <br>
+    <div style="width: 40em; margin-left: auto; margin-right: auto; padding-left: 2em;" class="content">
+      <h1>IEEE Visualization 2004 Contest Entry</h1>
+
+      <p>PDF: <a href="isabel.pdf"><em>PDF Document</em></a><br>
+         Video: <a href="isabel.avi"><em>Video</em></a><br>
+         Slides: <a href="presentation.ppt"><em>PowerPoint</em></a></p>
+
+      <h2><em>OpenGL Visualization of Hurricane Isabel</em></h2>
+
+      <h3>Authors</h3>
+      <ul>
+        <li><em>Greg P. Johnson, Texas Advanced Computing Center, gregj@tacc.utexas.edu</em></li>
+        <li><em>Christopher A. Burns, Texas Advanced Computing Center, cslugg@tacc.utexas.edu</em></li>
+      </ul>
+
+      <h3>Contest Entry Visualization System</h3>
+
+      <!-- Describe in less than 200 words the visualization system(s) used -->
+      <!-- and where, when, and by whom it was developed. Links for more information -->
+      <!-- about the tool can be provided here, but the description on this page -->
+      <!-- should be sufficient for evaluation. -->
+
+      <a href="images/isabel1.jpg">
+      <img src="images/0isabel1.jpg" align="right" hspace="20" vspace="15"></a>
+      <p><em>Our visualization solution is an OpenGL application we designed and developed
+      specifically to visualize this data set. The code is written in C/C++ and uses the
+      <a href="http://www.opengl.org/resources/libraries/glut.html">GLUT</a> toolkit for user 
+      input and frame buffering. We have also made use of the <a href="http://www.fltk.org/">
+      FLTK</a> library for GUI controls, and an implementation of the Pthreads API for 
+      multithreading. We chose this strategy so that we would best be able to customize the 
+      visualization features to suit this particular data set, and to maximize the interactivity
+      of the visualization. Multithreading is used to effectively perform I/O and sorting
+      operations in parallel, while GUI controls give the user an easy way to set various
+      parameters related to visual quality, performance, and the transfer functions used
+      to represent data.</em></p>
+
+      <h3>Criterion 1: Interactivity</h3>
+      
+      <!--In 200 words or less, describe the interactive performance of your -->
+      <!--visualization systems. Describe the performance for each mode/display -->
+      <!--type in your system if there are multiple systems. Be sure to include -->
+      <!--statistics such as your machine hardware (vendor, processor speed, -->
+      <!--memory, graphics acceleration, etc.), generated image size, color depth, -->
+      <!--etc. that would affect performance. Include information such as the fact -->
+      <!--that only a subset of the data was considered or that a subsampled -->
+      <!--version of the data was considered if that would change performance. If -->
+      <!--only static visualizations were generated, discuss the time to generate -->
+      <!--them in addition to the performance characteristics such as machine type, -->
+      <!--use of subsampled data, etc.  -->
+
+      <!--This criterion will be chiefly evaluated based upon the video -->
+      <!--supported by the statistics mentioned here. -->
+
+      <p><em>Real-time performance of our solution was a design goal from the beginning.
+      Our program by default will downsample the precipitation data by a factor of four in
+      each dimension, the wind data by a factor of ten in the X and Y dimensions, and the 
+      cloud data is left at full resolution. However, the user can dynamically downsample the
+      data further to improve performance if necessary. Our hardware consists of a Dell
+      system with two Intel Xeon processors running at 2.8 GHz, 2.0 GB of memory, and an
+      NVIDIA GeForce 6800 GT graphics card. There are three different sets of variables 
+      which can be enabled or disabled by the user: clouds, wind, and precipitation.  
+      At a resolution of 800x600 and with all three sets enabled, we can achieve a 
+      frame rate of approximately 13 fps. When the clouds are disabled, frame rate 
+      improves to 30 fps.  While the simulation is running and new data is constantly 
+      being streamed from disk and interpolated, these values drop to 5 fps and 13 fps 
+      respectively.
+      </em></p>
+
+      <h3>Criterion 2: Exploratory Support</h3>
+      
+      <!--In 200 words or less, describe the exploratory support your system -->
+      <!--provides. Discuss what parameters are used to manipulate the -->
+      <!--visualization, and how the user interacts with them. Also discuss any -->
+      <!--advanced forms of interaction/exploratory support. Screenshots of the -->
+      <!--parameter interfaces may be included here: use a thumbnail version on the -->
+      <!--web page that links to a larger version (no larger than 1280x800). -->
+
+      <!--This criterion will be evaluated based  upon demonstration in the video -->
+      <!--and by the description given here. -->
+
+      <p><em>The user is able to manipulate the camera view easily during any mode or
+      phase of the simulation (while paused, or while the simulation plays through the
+      timesteps). The movement of the camera is quite standard and therefore is easy to use.
+      The mouse controls the look direction and the arrow keys on the keyboard control
+      movement through space. The camera can be trucked along the view direction, from 
+      side to side, or along the camera's "up" axis. These features are sufficient to allow
+      the user to closely examine any part of the visualization at any time during the 
+      simulation. </em></p>
+
+      <p><em>While the simulation automatically advances the visualization along the timeline by
+      default, the user may pause at any time, or instruct the program to jump to any particular
+      timestep. The data is interpolated between the given timesteps to ensure smooth transitions
+      between them for intermediate frames. Thus the user has full flexibility to scan through
+      the time-varying data automatically, or can inspect any particular timestep statically.
+      </em></p>
+
+      <h3>Criterion 3: Multiple Characteristics</h3>
+
+      <h4><em>Clouds and Structure</em></h4>
+
+      
+      <!--For each major type of visualization performed, discuss the method -->
+      <!--used to generate the visualization, to the process needed/followed to -->
+      <!--generate the result,  and what insights are gained from that -->
+      <!--visualization. Provide a screen shot for each visualization performed -->
+      <!--(use a thumbnail on the web page linked to an image no larger than -->
+      <!--1280x800). Specific examples of visualizations include hurricane -->
+      <!--structure, rainfall, wind, temperature, etc. Examples demonstrating how --> 
+      <!--multiple of these characteristics were displayed at once will be judged -->
+      <!--higher than separate presentations assuming equal techniques. -->
+
+      <!--Evaluation of the level of visualization fusion will be based upon-->
+      <!--the examples presented on the web page. Demonstrations in the video will -->
+      <!--assist in this evaluation. -->
+
+      <a href="images/isabel7.jpg">
+      <img src="images/0isabel7.jpg" align="right" hspace="20" vspace="15"></a>
+      <p><em>To display the clouds we used a particle system where each cloud particle is
+      rendered with a single billboarded quad. The saturation and transparency of the 
+      particles are linear functions of the cloud data and are set by default such that 
+      heavy clouds result in darker and 
+      more opaque particles, resulting in a cloud that looks thick. As the camera travels 
+      through the rendered particles, the clouds appear to thin out, just as real clouds 
+      do. Sorting of the partially transparent quads is achieved by subdividing
+      the volume into a series of 3D tiles which are sorted by their centroids' 
+      distance from the camera. The particles in each tile are then sorted in parallel.
+      The tiling allows us to reduce the computational complexity of sorting the cloud 
+      particles, and since the arrangement of the data in memory reflects the tiling,
+      our program achieves a more coherent memory access pattern which makes better use 
+      of the processors' cache memories.</em></p>
+      
+      <h4><em>Wind Velocity</em></h4>
+
+      <a href="images/isabel4.jpg">
+      <img src="images/0isabel4.jpg" align="right" hspace="20" vspace="15"></a>
+      <p><em>The wind data can optionally be visualized simultaneously with the cloud and 
+      precipition data. Using a horizontal slicing plane, the wind values are illustrated with a 
+      grid of colored vectors and a partially transparent surface. The colors can be 
+      computed by mapping the color wheel onto the compass directions, with red indicating 
+      north. Alternatively, the colormap can relate wind magnitude, with warmer
+      colors indicating stronger winds.
+      The vectors' length is a linear function of the wind magnitude at that voxel.
+      The altitude of this plane and vector field can be adjusted by the user at any time.
+      </em></p>
+
+      <h4><em>Precipitation</em></h4>
+
+      <a href="images/isabel6.jpg">
+      <img src="images/0isabel6.jpg" align="right" hspace="20" vspace="15"></a>
+      <p><em>The precipitation variables are rendered using a simple particle technique
+      that makes it easy to visualize the precipitation along with the cloud structure
+      in the same frame. For a given voxel, the precipitation is represented by a colored 
+      sphere. Cyan spheres indicate graupel, magenta corresponds to rain, blue indicates
+      snow, and gray represents the total precipitation. The saturation of a particle is
+      determined by a linear transfer function of the variable's ratio data value, and the 
+      function's parameters are user configurable. The discrete particles show up well against
+      the background of the cloud structures, which are rendered in a way that looks more
+      volumetric. It is important that the users be able to effectively visualize the 
+      cloud structure and the precipitation simultaneously.
+      
+       </em></p>
+
+      <h3>Additional Comments</h3>
+
+      <!-- List additional comments about the entry and the systems -->
+      <!--capabilities and limitations. Be brief to assist the reviewers with -->
+      <!--evaluation. Examples of things to discuss here are particular challenges -->
+      <!--faced and unique capabilities. -->
+
+      <p><em>The sheer size of the data set presented the biggest obstacle to our goal
+      of producing an interactive visualization that is both aestetically pleasing and
+      scientifically informative. We expended considerable effort optimizing the memory 
+      layout, reducing the frequency of I/O operations, and eliminating unnecessary
+      geometric processing on the GPU. While our solution is not necessarily 
+      </em>complete<em>  (due to subsampling), 
+      we compensate for this by allowing the user to adjust the degree to which certain
+      variables are subsampled as appropriate. Finally, we have not implemented any 
+      visualization of the temperature, pressure, or ice mixing ratio variables due to time
+      constraints. However, the methods used to visualize other similar variables
+      could easily be extended to illustrate these. Other improvements to our solution
+      might include more user control over the transfer functions, slicing planes along
+      other axes, and more precise control over the camera.</em></p>
+
+    </div>
+
+
+</body></html>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+<link rel="stylesheet" type="text/css" href="styles/xhtml.css" media="screen" />
+
+<meta name="author" content="Dr. T. J. Jankun-Kelly" />
+<meta name="description" lang="en" content="IEEE Visualization 2005 Contest Information" />
+<meta name="keywords" content="scientific visualization, Visualization 2005, contest" />
+
+<title>IEEE Visualization 2005 Contest: Data Set</title>
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33337454-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script></head>
+<body>
+
+  <div class="top">
+    <img class="vislogo" src="images/vis05-logo.gif" />
+  </div>
+
+  <div class="left">
+    <div class="nav">
+      <ul>
+        <li class="link"><a href="http://vis.computer.org/vis2005/">Home</a></li>
+      </ul>
+      <br/>
+      <ul>
+        <li class="link"><a href="index.html">Contest Home</a></li>
+        <li>Data Set</li>
+        <li class="link"><a href="tasks.html">Tasks</a></li>
+      </ul>
+    </div>
+    <div style="text-align: center">
+      <img align="center" src="images/ieee.gif" />
+      <img align="center" src="images/cs.gif" />
+    </div>
+  </div>
+
+  <div class="right">
+
+    <div class="content">
+      <h1>IEEE Visualization 2005 Contest</h1>
+
+      <h2>Data Sets</h2>
+		Data can be downloaded from following locations     
+		<ul><li><a href="https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2005/data/">SDSC Cloud</a>
+		</li><li><a href="http://midas3.kitware.com/midas/folder/5708">Kitware         Server</a>
+		</li></ul>
+
+      <h3>Data Set 1: Diffusion Tensor Images<br /></h3> 
+
+      <p>The diffusion tensor image (DTI) data is from a normal volunteer (36
+      year-old female) using a Philips 3.0T Inter. MRI system. The Inter.
+      systems has a routine clinical sequence which tracks up to 32 DTI fiber
+      directions and thus measures movement of water in the brain and can
+      detect areas of the brain where normal movement of water is disrupted.
+      </p> 
+
+      <p>The data is in <a href="http://medical.nema.org/">DICOM</a> format, with some resampled volume
+      data available. The challenges for this data set were to show the
+      evolution of the DTI information over time in addition the brain volume.</p>
+
+      <h3>Data Set 2: New Orleans Wind-Field<br /> </h3> 
+
+      <p>The second data set is a wind-field simulation over New Orleans. The
+      impetus for the simulation was as follows:</p>
+      
+      <blockquote>At about 2:30pm Saturday, December 14th, 1998, the Bright
+          Field freighter ran into the Riverwalk Mall on Poydras Street Wharf
+          in New Orleans. The freighter was loaded with 56,000 tons of corn.
+          What if a freighter crashed that was not carrying corn, but a
+          dangerous airborne substance like chlorine gas? What would the
+          effects have been on the population of New Orleans?</blockquote>
+
+      <p>The data consists of a model of New Orleans and airflow over this
+      model. Specific characteristics of interest are:</p>
+      <ul>
+          <li>What is the structure of the wind-field?</li>
+          <li>From a source at various locations in New Orleans (such as the
+          Riverwalk mall), what would the time-evolution of the pollutant
+          be?</li>
+          <li>Are their any vortices or large wind-shielded areas in the
+          data?</li>
+      </ul>
+
+      <p>The data itself consists of two files: <tt>city.fgrid</tt>, an ASCII
+      unstructured grid in <a
+          href="https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2005/data/UG_IO_3D_GRID_FILE_TYPE_FGRID.txt">3D
+          FGRID</a> format and <tt>city.fflow</tt>, an ASCII fluid-flow
+      solution file storing density, momentum, and energy information in <a
+          href="https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2005/data/UG_IO_3D_FLOW_FILE_TYPE_FFLOW.txt">3D
+          FFLOW</a> format.</p>
+
+<!--
+<h3>Acquiring the Data</h3>
+
+<p>To enter the contest and acquire the data, please fill out the following
+form. The e-mail will only be used to send information regarding the location
+of the data and to provide informational updates abou the contest.</p>
+
+<form style="width: 30em; margin-left: auto; margin-right: auto; border: thin solid black"
+    method="POST"
+    action="/~tjk/cgi-bin/vis05-register.cgi">
+    <table>
+        <tr>
+            <th style="text-align: left"><label for="name">Name:</label></th>
+            <td><input name="name" id="name" type="text"></input></td>
+        </tr>
+        <tr>
+            <th style="text-align: left"><label for="address">Email Address:</label></th>
+            <td><input name="address" id="address" type="text"></input></td>
+        </tr>
+        <tr>
+            <th style="text-align: left"><label for="participation">Anticipated Chance of
+                    Participation:</label></th>
+            <td><select name="participation" id="participation">
+                    <option>Definitely</option>
+                    <option>Highly Likely</option>
+                    <option>Likely</option>
+                    <option>Unlikely</option>
+                    <option>Will not participate</option>
+            </select></td>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+    <div style="text-align:center;margin-left:auto;margin-right:auto"><INPUT
+        type="submit" value="Register"><INPUT type="reset"></div>
+</form>
+-->
+<h2>Acknowledgments</h2>
+
+    <p>The DTI data is courtesy of Dr. Evanochko at the University of Alabama
+    at Birmingham, Cardiovascular MRI facility, Birmingham, Alabama. The City
+    of New Orleans data is mainly a contribution by Drs. Koomullil and Soni,
+    University of Alabama at Birmingham. Paul Adams at ERDC was responsible for
+    acquiring the data sets for the Visualizaton 2005 contest.  </p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+<link rel="stylesheet" type="text/css" href="styles/xhtml.css" media="screen" />
+
+<meta name="author" content="Dr. T. J. Jankun-Kelly" />
+<meta name="description" lang="en" content="IEEE Visualization 2004 Contest Information" />
+<meta name="keywords" content="scientific visualization, Visualization 2004, contest" />
+
+<title>IEEE Visualization 2004 Contest: Tasks</title>
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33337454-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script></head>
+<body>
+
+  <div class="top">
+    <img class="vislogo" src="images/vis04-logo.gif" />
+  </div>
+
+  <div class="left">
+    <div class="nav">
+      <h1>IEEE Visualization</h1>
+      <ul>
+        <li><a href="http://vis.computer.org/vis2004/">Home</a></li>
+      </ul>
+      <br/>
+      <ul>
+        <li><a href="index.html">Contest Home</a></li>
+        <li><a href="data.html">Data Set</a></li>
+        <li>Tasks</li>
+        <li><a href="entries.html">Entries</a></li>
+      </ul>
+    </div>
+    <div style="text-align: center">
+      <img align="center" src="images/ieee.gif" />
+      <img align="center" src="images/cs.gif" />
+    </div>
+  </div>
+
+  <div class="right">
+
+    <div class="content">
+      <h1>IEEE Visualization 2004 Contest</h1>
+
+      <h2>Tasks</h2>
+
+<p>The theme for the inaugural IEEE Visualization contest was <em>visualization
+fusion</em>. The goal was to provide tasks which will allow researchers to
+showcase their visualization techniques from a wide range of disciplines. Since
+the type of information being shown is so diverse, we hoped to encourage
+collaboration of researchers from all domains of scientific and information
+visualization.</p>
+
+<p>The task for this contest can be summarized in one sentence: design a
+visualization which allows <em>interactive</em> <em>exploration</em> of
+<em>multiple characteristics</em> of the given <a href="data.html">data
+set</a>. The three elements of these tasks are explained in more detail
+below.</p>
+
+<h3>Interactive</h3>
+
+<p>The given visualization must be interactive. This means that the user can
+manipulate the view, change which time step is being used, etc. in as close-to
+real-time as possible. Modern graphics hardware, specialized data structures,
+and high-speed, interconnected visualization clusters could all be used for
+this sub-task. The task does not specify or limit what type of
+hardware/software must be used to fulfill this criterion.</p>
+
+<h3>Exploration</h3>
+
+<p>A task related to interactivity, the designed visualization must not be
+static. It must allow the user to change the parameters associated with the
+visualization technique in order to gain different understanding of the data.
+For example, a volume rendering method must allow the user to change the
+opacity map. The specification on how the user is allowed to change parameters
+is given; that is up to the system designer.</p>
+
+<h3>Multiple Characteristics</h3>
+
+<p>As the theme for this contest is visualization fusion, we are interested in
+visualizations with effectively combine multiple visualization techniques for
+the different <a href="data.html#variables">variables</a> in the data set.
+Below is a partial list of the types of information that could be extracted
+from the data and presented:</p>
+<ul>
+  <li><strong>Hurricane Structure:</strong> The clouds making up the hurricane;
+  classification of portions of the hurricane (leading edge, eye, convective
+  cells, etc.). How do these change when the hurricane makes landfall?</li>
+  <li><strong>Rainfall:</strong> Show the rainfall in the current time step;
+  show the cumulative rainfall over the simulation.</li>
+  <li><strong>Wind:</strong> Show the strength and direction of the wind
+  instantaneously; show the change of wind strength and direction over
+  time. Show correlation between cloud formation and wind strength (is the
+  cloud within area of maximum wind or not?).</li>
+  <li><strong>Temperature:</strong> Show the instant temperature values over
+  the volume; show the change in temperature over the simulation.</li>
+  <li><strong>Water Vapor:</strong> Show the concentration of water vapor
+  instantaneously and over time (including cloud moisture, snow pellets, etc.).
+  How does the vapor relate to the air flow?</li>
+  <li><strong>Hurricane Properties:</strong> Show various properties of the
+  hurricane. Visualize the changes in hurricane classification over time (e.g.,
+  tropical storm, category 5 hurricane, etc.). Depict the direction of the
+  hurricane. Depict the area affected by the hurricane. How do these change
+  when the hurricane makes landfall?</li>
+</ul>
+<p>The above list is not inclusive, and not all of the properties discussed
+above must be shown concurrently. The characteristics shown, however, must tell
+a cohesive story. Do not just try to visualize everything; such visualization
+would be hard pressed to communicate anything about the data set.</p>
+
+<h2>Evaluation</h2>
+
+<p>There are two metrics for evaluation: the <em>completeness</em> of the
+supplied visualization and the <em>effectiveness</em> of the visualization.
+The effective measure has more weight than the completeness measure&mdash;a
+compelling, static rendering of multiple variables is more valuable then an
+reasonably interactive system with a less compelling suite of techniques.</p>
+
+<p>Note that the various tasks for the contests set up competing requirements.
+Interactivity is often facilitated by smaller data sets with fewer visualization
+primitives, while the multiple characteristic criterion suggests more static
+but complex techniques. While we would like for submissions to attempt to
+handle all the requirements, submissions which focus on their strengths will be
+more valuable than incomplete attempts at the entire problem.</p>
+
+<h3>Evaluating Interactivity</h3>
+
+<p>Interactivity was determined by the video submitted as part of the contest
+submission. The video should have shown the visualization &quot;running through
+its paces&quot;&mdash;i.e., interactively stepping through the time steps and
+regions of the data.</p>
+
+<p>A <em>complete</em> solution to the interactivity criterion would have been a
+visualization capable of rendering at real-time rates (10 frames-per-second)
+while depicting the entire data set. An <em>effective</em> solution might have
+had to compromise by sub-sampling the data either in space or in time or
+compromise on the rate of interaction.</p>
+
+<h3>Evaluating Exploratory Capabilities</h3>
+
+<p>The exploratory capabilities of the developed system must have been
+demonstrated in the video and discussed in the submitted web-page summary. A
+<em>complete</em> solution would have allowed all the parameters which control
+the visualization to be edited in some manner. An <em>effective</em> solution
+would have provided a some sort of advance capabilities to assist the user in
+performing this exploration.</p>
+
+<h3>Evaluating Multiple Characteristics Rendering</h3>
+
+<p>This criterion was the most important of the three as it related directly to
+the theme of the contest. A <em>complete</em> solution would have visualized
+all the properties discussed above; though all may not have been displayed at
+once, more than one should have been displayed at a time. An <em>effective</em>
+solution would have generated results which effectively communicate the
+variables under display&mdash;such a display would clearly tell the story of
+what occurred during the hurricane simulation. This part of the contest was
+evaluated based upon the submitted video and web-page.</p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

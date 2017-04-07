@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+<link rel="stylesheet" type="text/css" href="styles/xhtml.css" media="screen" />
+
+<meta name="author" content="Dr. T. J. Jankun-Kelly" />
+<meta name="description" lang="en" content="IEEE Visualization 2004 Contest Information" />
+<meta name="keywords" content="scientific visualization, Visualization 2004, contest" />
+
+<title>IEEE Visualization 2004 Contest: Data Set</title>
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33337454-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</head>
+<body>
+
+  <div class="top">
+    <img class="vislogo" src="images/vis04-logo.gif" />
+  </div>
+
+  <div class="left">
+    <div class="nav">
+      <h1>IEEE Visualization</h1>
+      <ul>
+        <li><a href="http://vis.computer.org/vis2004/">Home</a></li>
+      </ul>
+      <br/>
+      <ul>
+        <li><a href="index.html">Contest Home</a></li>
+        <li>Data Set</li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="entries.html">Entires</a></li>
+      </ul>
+    </div>
+    <div style="text-align: center">
+      <img align="center" src="images/ieee.gif" />
+      <img align="center" src="images/cs.gif" />
+    </div>
+  </div>
+
+  <div class="right">
+
+    <div class="content">
+      <h1>IEEE Visualization 2004 Contest</h1>
+
+      <h2>Data Set</h2>
+
+<p>The theme for the inaugural IEEE Visualization contest was <em>visualization
+fusion</em>. The goal was to provide a data set which will allow researchers to
+showcase their visualization techniques from a wide range of disciplines. Since
+the type of information being shown is so diverse, we hoped to encourage
+collaboration of researchers from all domains of scientific and information
+visualization.</p>
+
+<p>The data set for this contest is a simulation of a hurricane from the <a
+href="http://www.ucar.edu/">National Center for Atmospheric Research</a> in
+the United States. The data consists of several time-varying scalar and vector
+variables over large dynamic ranges. The sheer size of the data also presents
+a challenge for interactive exploration.</p>
+
+<h2>Data Format</h2>
+
+<p>A summary of the data can be found below:</p>
+<ul>
+<li><strong>Dimensions:</strong> 500 x 500 x 100</li>
+<li><strong>Physical Scale:</strong> 2139km (east-west) x 2004km (north-south)
+x 19.8km (vertical) Note: The
+east-west distance of 2139km is measured at the southern latitude; the distance
+is only 1741km at the northern latitude due to the curvature of the earth.</li>
+<li><strong>Physical Location:</strong> Longitude (x): 83W to 62W; Latitude
+(y): 23.7N to 41.7N; Height (z): 0.035km to 19.835km</li>
+<li><strong>Format:</strong> <a href="#format">Brick-of-Floats</a></li>
+<li><strong>Number of Variables:</strong> <a href="#variables">13</a></li>
+<li><strong>Number of Time Steps:</strong> 48 (1 simulated hour between time
+steps)</li>
+<li><strong>Size per Time Step:</strong> ~95 MB uncompressed</li>
+</ul>
+
+<h3 id="format" name="format">Format</h3>
+
+<p>The data is in &quot;Brick-of-Floats&quot; format. It consists of a volume
+of data values at each position in space. The three-dimensional array of data
+consists of planes of x-y values in ascending z order; in the data, the x
+values vary fastest. Assuming the data was stored as a one-dimensional array,
+the index into that array for the point <em>x</em>, <em>y</em>, <em>z</em>
+would be:</p>
+<div
+    style="text-align:center"><em>index</em>=<em>x</em>+<em>dim_x</em>&times;(<em>y</em>+<em>dim_y</em>&times;<em>z</em>)</div>
+<p>where <em>dim_x</em> is the number of x values (500) and <em>dim_y</em> is
+the number of y values (500).</p>
+
+<h3 id="variables" name="variables">Variables</h3>
+
+<p>The following table described the variables in the data set. Each variable
+is contained in a separate data file, one for each time step. All data values
+are floating-point values.</p>
+
+<table style="margin-left:auto;margin-right:auto">
+<tr style="">
+  <th style="text-align:left">Variable</th>
+  <th style="text-align:left">Description</th>
+  <th style="text-align:center">Range</th>
+</tr>
+<tr style="vertical-align:top">
+  <td>QCLOUD</td>
+  <td>Cloud moisture mixing ratio (kg water/kg dry air)</td>
+  <td style="text-align:center">0.00000/0.00332</td>
+</tr>
+<tr style="vertical-align:top">
+  <td>QGRAUP</td>
+  <td>Graupel mixing ratio (solid ice precipitation: hail, sleet, snow pellets)</td>
+  <td style="text-align:center">0.00000/0.01638</td>
+</tr>
+<tr style="vertical-align:top">
+  <td>QICE</td>
+  <td>Cloud ice mixing ratio</td>
+  <td style="text-align:center">0.00000/0.00099</td>
+</tr>
+<tr style="vertical-align:top">
+  <td>QSNOW</td>
+  <td>Snow mixing ratio</td>
+  <td style="text-align:center">0.00000/0.00135</td>
+</tr>
+<tr style="vertical-align:top">
+  <td>QVAPOR</td>
+  <td>Water vapor mixing ratio</td>
+  <td style="text-align:center">0.00000/0.02368</td>
+</tr>
+<tr style="vertical-align:top">
+  <td>CLOUD</td>
+  <td>Total cloud moisture mixing ratio (QCLOUD+QICE)</td>
+  <td style="text-align:center">0.00000/0.00332</td>
+</tr>
+<tr style="vertical-align:top">
+  <td>PRECIP</td>
+  <td>Total precipitation mixing ratio (QGRAUP+QRAIN+QSNOW)</td>
+  <td style="text-align:center">0.00000/0.01672</td>
+</tr>
+<tr style="vertical-align:top">
+  <td>P</td>
+  <td>Pressure (weight of atmosphere above a grid point)</td>
+  <td style="text-align:center">-5471.85791/3225.42578</td>
+</tr>
+<tr style="vertical-align:top">
+  <td>TC</td>
+  <td>Temperature (Celsius)</td>
+  <td style="text-align:center">-83.00402/31.51576</td>
+</tr>
+<tr style="vertical-align:top">
+  <td>U</td>
+  <td>X wind speed (positive means winds from west to east)</td>
+  <td style="text-align:center">-79.47297/85.17703</td>
+</tr>
+<tr style="vertical-align:top">
+  <td>V</td>
+  <td>Y wind speed (positive means winds from south to north)</td>
+  <td style="text-align:center">-76.03391/82.95293</td>
+</tr>
+<tr style="vertical-align:top">
+  <td>W</td>
+  <td>Z wind speed (positive means upward wind)</td>
+  <td style="text-align:center">-9.06026/28.61434</td>
+</tr>
+</table>
+
+<p>Note that all data is stored in big-endian format and compressed via GNU zip
+(gzip) for storage. Each file is named <em>VARfNN.bin.gz</em> where
+<em>VAR</em> is the variable name and <em>NN</em> is the time step.</p>
+
+<h3>Physical Position</h3>
+
+<p>Since the data in question simulates an actual event (a hurricane), each
+computational data point (<em>voxel</em>) corresponds to an actual physical
+point. The surface topology (for the actual ground) is in a special
+500x500x1 data file (<em>HGTdata.bin.gz</em>).
+In the other files, where there is ground, no data is recorded. The special
+value for this &quot;no data&quot; value is 1.0000000e+35.</p>
+
+<h3>Acquiring the Data</h3>
+Data can be downloaded from following locations     
+<ul><li><a href="http://www.vets.ucar.edu/vg/isabeldata/">NCAR Server</a> : A <a href="http://www.vets.ucar.edu/vg/isabeldata/readme.html">README</a> file with more information and a <a href="http://www.vets.ucar.edu/vg/isabeldata/retrieve_vis04_data.py">Python script</a> to simplify downloading the data are also available.
+</li><li><a href="https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2004/isabeldata/">SDSC Cloud</a> : You can easily download all data by using wget as follows
+% wget -r -nH --no-parent --cut-dirs=2 https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2004/isabeldata
+</li><li><a href="http://midas3.kitware.com/midas/folder/5697">Kitware         Server</a>
+</li></ul>
+
+<p>If you use the data set, please provide the following attribution:</p>
+<blockquote>
+The authors will like to thank Bill Kuo, Wei Wang, Cindy Bruyere, Tim
+Scheitlin, and Don Middleton of the U.S. National Center for
+Atmospheric Research (NCAR) and the U.S. National Science Foundation
+(NSF) for providing the Weather Research and Forecasting (WRF) Model simulation data of Hurricane Isabel.
+</blockquote>
+<p>A shorter attribution is:</p>
+<blockquote>
+Hurricane Isabel data produced by the Weather Research and Forecast
+(WRF) model, courtesy of NCAR and the U.S. National Science Foundation (NSF).
+</blockquote>
+
+<h3>For More Information</h3>
+
+<p>For for information about hurricanes or the method used to generate the
+data, consult the following links.</p>
+<ul>
+    <li>The hurricane modeled is <a
+        href="http://www.tpc.ncep.noaa.gov/2003isabel.shtml">Hurricane
+        Isabel</a> from September of 2003. It was a very strong hurricane in
+    the west Atlantic region.</li>
+    <li><a href="http://cimss.ssec.wisc.edu/tropic/tropic.html">Tropical Cyclones</a> from the University of Wisconsin</li>
+    <li><a href="http://www.nhc.noaa.gov/archive/2003/">Tropical Cyclone Archive</a> from the National Weather Service</li>
+    <li>The <a href="http://wrf-model.org/">Weather Research and Forecasting
+        (WRF) Model</a> was used to generate the data</li>
+</ul>
+
+<h2>Acknowledgments</h2>
+
+<p>The data set has kindly been provided by Wei Wang, Cindy Bruyere, Bill Kuo,
+and others at NCAR.  Tim Scheitlin at NCAR converted the data into the
+Brick-of-Float format described above.</p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

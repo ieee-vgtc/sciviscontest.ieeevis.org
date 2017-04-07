@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "../master.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title>IEEE Visualization Contest 2011, Questions</title>
+<style type="text/css">
+
+
+
+
+
+
+.auto-style2 {
+	border: 1px solid #CCCCCC;
+	background-color: #EEEEEE;
+}
+</style>
+<!-- #EndEditable -->
+<link href="../styles/style1.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+<style type="text/css">
+
+.auto-style1 {
+	border-width: 0px;
+}
+</style>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33337454-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script></head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container" style="width: 841px">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<h1>IEEE Visualization Contest 2011</h1>
+		<h3>Official event of the VisWeek 2011</h3>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul style="width: 100%">
+			<li><a href="../index.html">Home</a></li>
+            <li><a href="../contributions/contributions.html">Contributions</a></li>
+			<li><a href="questions.html">Questions</a></li>
+			<li><a href="../dataset/dataset.html">Data</a></li>
+     		<li><a href="../references/references.html">References</a></li>
+			<li><a href="../submission/submission.html">Submission</a></li>
+			<li><a href="../awards/awards.html">Awards</a></li>
+			<li><a href="../news/news.html">News</a></li>
+			<li><a href="../committee/committee.html">Committee</a></li>
+			<li style="width: 134px">
+			<a href="../acknowledgements/acknowledgements.html" style="width: 119px">Acknowledgements</a></li>
+		</ul>
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin content_container -->
+	<div id="content_container">
+		<!-- Begin Left Column -->
+		<div id="column_left">
+			<!-- #BeginEditable "content" -->
+			<h2>Questions / Evaluation Criteria</h2>
+			<p><strong>Hint (updated on 11th July 2011)<br />
+			The evaluation of all submissions will be performed by a team of 
+			renowned <a href="../committee/committee.html">domain experts</a> in the 
+			field of fluid dynamics and centrifugal pumps. The overall technical 
+			quality will additionally be rated by a team of visualization 
+			experts.</strong><br />
+			</p>
+			<p class="MsoNormal">
+			<table align="right" cellpadding="7" class="auto-style2" style="width: 185px">
+				<tr>
+					<td>A stall is defined as a condition where the angle of 
+					attack increases beyond a certain point such that the lift 
+					begins to decrease. It is caused by the massive separation 
+					of the flow from the blade or wing at high angle of attack. 
+					It is characterized by the appearance of unsteady vortices 
+					on the suction side of the blade.</td>
+				</tr>
+			</table>
+			The stable operating range of pumps is limited by flow instabilities 
+			occcuring in deep part load. If the flow rate is reduced the flow 
+			onto leading edge is misaligned and stalls at a critical lower 
+			limit, similar to the stall of a wing at high angle of attack. Due 
+			to interaction of adjacent blade channels the stall rotates at 
+			constant rotational speed relative to the blading. The strong 
+			fluctuations of fluid flow properties during stall may lead to flow 
+			induced vibrations, which need to be avoided. The phenomenon is 
+			strongly influenced by turbulence, so turbulence modelling is of 
+			vital importance for the simulation of such a flow.</p>
+			<p class="MsoNormal">
+			<table align="left" cellpadding="7" class="auto-style2">
+				<tr>
+					<td style="width: 505px">In the blade rows of a 
+					turbomachine, such as a pump, the stall is influenced by 
+					adjacent blades, which forces the stall to travel at a 
+					specific rotational speed relative to the blade (hence 
+					&quot;rotating stall&quot;). </td>
+				</tr>
+			</table>
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			The overall goal is to visualize the instability of the<br />
+			flow and help understand the movement and development of rotating 
+			stall cells <strong>based on 3 different turbulence models</strong>. 
+			The goal is to find a visualization such that researchers can easily 
+			gain insights as to <strong>where</strong> these vortices develop, 
+			how the stall moves and, possibly, <strong>why</strong> they 
+			develop. 
+			<br />
+			</p>
+			<p class="MsoNormal">
+			<strong><a name="Be_inspired">Further hints!</a> (new 21.03.2011)</strong></p>
+			<ul>
+				<li>
+				<p class="MsoNormal">Your task is to come up with a good, 
+				intuitive and efficient visualization of the movement of 
+				vortical structures in the flow field.</p>
+				</li>
+				<li>
+				<p class="MsoNormal">The structures could be defined by the
+				<a href="ftp://ftp.pppl.gov/pub/krommes/Misc/jeong-hussain.ps">
+				lambda_2 criterion</a> or the
+				<a href="http://www.crm.umontreal.ca/probindustriels2009/pdf/vortex.pdf">
+				Q-criterion</a>, but these are not necessarily the best options.</p>
+				</li>
+				<li>
+				<p class="MsoNormal">The focus is primarily on visualization of 
+				the movement of large structures, but smaller ones are welcome, 
+				too. </p>
+				</li>
+				<li>
+				<p class="MsoNormal">Of special interest would be a tracking of 
+				the highly unsteady vortical structures, since a periodic 
+				appearance of vortices is identified from Fourier analysis of 
+				the flow field from absolute frame of reference (fixed to the 
+				stator).</p>
+				</li>
+			</ul>
+			<p class="MsoNormal">
+			The IEEE Vis Contest motivation is to spur innovation in visualization 
+			techniques used in analysis of fluid dynamics data. The submissions 
+			are encouraged to demonstrate their novel methods which allows 
+			scientists to understand the underlying processes of fluid dynamics 
+			and enable them to answer the questions posed by the contest through 
+			the use of visualization. Demonstration of interactiveness in the 
+			application is not required, but encouraged. <br />
+			&nbsp;</p>
+			<!-- #EndEditable --></div>
+		<!-- End Left Column -->
+		<!-- Begin Right Column -->
+		<div id="column_right">
+			<!-- #BeginEditable "sidebar" -->
+			<h4>Early Registration</h4>
+			<p>
+			<a href="http://visweek.org/visweek/2011/info/registration/conference-registration">
+			September 16th, 2011</a></p>
+			<h4>Notification</h4>
+			<p>September, 9th, 2011</p>
+			<h4>Deadline</h4>
+			<p>July, 31st, 2011,<br />
+			23:59 PST</p>
+			<h4>Contact</h4>
+			<p><a href="../contact/contact.html">Email &amp; Mailing list</a></p>
+			<!-- #EndEditable --></div>
+		<!-- End Right Column -->
+		<!-- Begin Footer -->
+		<div id="footer">
+			<p>
+			<table style="width: 100%">
+				<tr>
+					<td style="height: 49px; ">
+					<a href="http://www.computer.org/">
+					<img alt="" height="45" src="../images/ieee_logo.png" width="151" class="auto-style1" /></a></td>
+					<td style="height: 49px; ">
+					&nbsp;<a href="http://www.mevis.fraunhofer.de/"><img alt="" height="30" src="../images/fme_logo.png" width="110" class="auto-style1" /></a></td>
+					<td style="height: 49px; ">
+					&nbsp;<a href="http://cg.in.tu-clausthal.de/"><img alt="" height="25" src="../images/tuc2005.gif" width="136" class="auto-style1" /></a></td>
+					<td style="width: 86px; height: 49px">
+					&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+					Web and data hosting is provided by courtesy of SDSC, TeraGrid 
+					and Clausthal University.<br />
+					(c) 2010/2011 - IEEE Vis Contest 2011, Jan Klein, Gabriel Zachmann<br />
+					Last update March, 27th, 2012</td>
+					<td>
+					<a href="http://www2.clustrmaps.com/user/d22bdf65">
+					<img src="http://www2.clustrmaps.com/stats/maps-no_clusters/viscontest.sdsc.edu-2011--thumb.jpg" alt="Locations of visitors to this page" height="21" width="36" /></a></td>
+				</tr>
+			</table>
+			</p>
+		</div>
+		<!-- End Footer --></div>
+	<!-- End content_container --></div>
+<!-- End Container -->
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

@@ -1,0 +1,101 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #600;
+  color: #fff;
+}
+
+a
+{
+  color: #fc0;
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: #ff6;
+  text-decoration: underline;
+}
+
+.vislogo
+{
+  margin-left:3em;
+}
+
+.left
+{
+  float: left;
+}
+
+.nav
+{
+  color: #fc0;
+  background: rgb(140,40,0);
+  font-weight: bold;
+  text-align: right;
+  border-top: thin solid #fc0;
+  border-bottom: thin solid #fc0;
+  border-right: thin solid #fc0;
+  width: 13em;
+
+}
+
+.nav li.link:hover, .nav a:hover
+{
+  color:#600;
+  background:#fc0;
+  text-decoration:underline;
+}
+
+.nav ul
+{
+  font-size: 80%;
+  margin: 0;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  padding-left: 0;
+}
+
+.nav li
+{
+  list-style-type: none;
+  display: block;
+}
+
+.right
+{
+  float: right;
+  margin-right: 5em;
+}
+
+.content
+{
+  color: #fff;
+  width: 35em;
+}
+
+.content h1, .content h2, .content h3
+{
+  color: #fff;
+}
+
+.content h1
+{
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.content h2
+{
+  font-size: 110%;
+}
+
+.content h3
+{
+  font-size: 105%;
+}
+
+
+

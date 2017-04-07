@@ -1,0 +1,300 @@
+<html><head>
+<meta http-equiv="Content-Language" content="en">
+<title>IEEE Visualization 2004 Contest Entry</title><script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33337454-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script></head>
+
+<body>
+
+<div style="width: 40em; margin-left: auto; margin-right: auto; padding-left: 2em;" class="content">
+  <h1>IEEE Visualization 2004 Contest Entry</h1>
+  <p>PDF: <em><a href="TexAdvect.pdf">PDF Document</a></em><br>
+  Video: <em><a href="Preview.mov">Quicktime</a>(6.6 MB) </em></p> <b>Remarks:</b> In the video only the normalized vector field was used.
+  <h2><em>Investigating Hurricane Isabel using Texture Advection</em></h2>
+  <h3>Authors</h3>
+  <ul>
+    <li><em>Tobias Schafhitzel (student), University of Stuttgart,
+    <a href="mailto:schafhts@vismail.informatik.uni-stuttgart.de">
+    schafhts@vismail.informatik.uni-stuttgart.de</a></em></li>
+    <li><em>Daniel Weiskopf, University of Stuttgart,
+    <a href="mailto:weiskopf@vis.informatik.uni-stuttgart.de">
+    weiskopf@vis.informatik.uni-stuttgart.de</a></em></li>
+    <li><em>Thomas Ertl, University of Stuttgart,<a href="mailto:%20ertl@vis.informatik.uni-stuttgart.de">
+    ertl@vis.informatik.uni-stuttgart.de</a></em></li>
+  </ul>
+  <h3>Contest Entry Visualization System</h3>
+  <p><font face="Times New Roman"><i>Our visualization system is an interactive,
+  timedependent, 3D multi-field representation which allows the user to
+  investigate a combined visualization of scalar field and vector field
+  information. The system was developed in summer 2004 in the context of the
+  diploma thesis of Tobias Schafhitzel advised by Daniel Weiskopf and Thomas
+  Ertl.</i></font></p>
+<font face="Times New Roman">  </font>
+  <h3>Criterion 1: Interactivity<br>
+ </h3>
+  <p><em>Performance measurements for a Windows XP machine with an ATI Radeon
+  X800 GPU (256 MB). The sizes of the vectorfield are stated in the first column.
+  The generated image size is 600x600 pixels, the internal color depth for the
+  Advection step 16 bit/channel=64 bit and the color depth for the final display
+  8 bit/channel=32 bit. A subsampled data of 256 x 256 x 64 maximum is considered.</em></p>
+  <p><b><em>Texture Advection only</em></b></p>
+  <table style="border-collapse: collapse;" id="AutoNumber1" border="1" bordercolor="#111111" cellpadding="0" cellspacing="0" width="100%">
+    <tbody><tr>
+      <td align="center" width="33%">
+      <p align="center"><b>Resolution</b></p></td>
+      <td align="center" width="33%">
+      <p align="center"><b>FPS</b></p></td>
+    </tr>
+    <tr>
+      <td align="center" width="33%">
+      <p align="center">64 x 64 x 16</p></td>
+      <td align="center" width="33%">341</td>
+    </tr>
+    <tr>
+      <td align="center" width="33%">128 x 128 x 32</td>
+      <td align="center" width="33%">137</td>
+    </tr>
+    <tr>
+      <td align="center" width="33%">256 x 256 x 64</td>
+      <td align="center" width="33%">34</td>
+    </tr>
+  </tbody></table>
+  <p> </p>
+  <p><em><b>Scalar Field Visualization</b></em></p>
+  <table style="border-collapse: collapse;" id="AutoNumber2" border="1" bordercolor="#111111" cellpadding="0" cellspacing="0" width="100%">
+    <tbody><tr>
+      <td align="center" width="33%">
+      <p align="center"><b>Resolution</b></p></td>
+      <td align="center" width="33%">
+      <p align="center"><b>FPS</b></p></td>
+    </tr>
+    <tr>
+      <td align="center" width="33%">
+      <p align="center">64 x 64 x 16</p></td>
+      <td align="center" width="33%">290</td>
+    </tr>
+    <tr>
+      <td align="center" width="33%">128 x 128 x 32</td>
+      <td align="center" width="33%">183</td>
+    </tr>
+    <tr>
+      <td align="center" width="33%">256 x 256 x 64</td>
+      <td align="center" width="33%">150</td>
+    </tr>
+  </tbody></table>
+  <p> </p>
+  <p><em><b>Combined Visualization 1 (Texture Advection and Scalar Field
+  Visualization)</b></em></p>
+  <table style="border-collapse: collapse;" id="AutoNumber3" border="1" bordercolor="#111111" cellpadding="0" cellspacing="0" width="100%">
+    <tbody><tr>
+      <td align="center" width="33%">
+      <p align="center"><b>Resolution</b></p></td>
+      <td align="center" width="33%">
+      <p align="center"><b>FPS</b></p></td>
+    </tr>
+    <tr>
+      <td align="center" width="33%">
+      <p align="center">64 x 64 x 16</p></td>
+      <td align="center" width="33%">249</td>
+    </tr>
+    <tr>
+      <td align="center" width="33%">128 x 128 x 32</td>
+      <td align="center" width="33%">110</td>
+    </tr>
+    <tr>
+      <td align="center" width="33%">256 x 256 x 64</td>
+      <td align="center" width="33%">32</td>
+    </tr>
+  </tbody></table>
+  <p> </p>
+  <p><em><b>Combined Visualization 2 (3D Texture Advection, Scalar Field
+  Visualization and 2D Texture Advection)</b></em></p>
+  <table style="border-collapse: collapse;" id="AutoNumber5" border="1" bordercolor="#111111" cellpadding="0" cellspacing="0" width="100%">
+    <tbody><tr>
+      <td align="center" width="33%">
+      <p align="center"><b>Resolution</b></p></td>
+      <td align="center" width="33%">
+      <p align="center"><b>FPS</b></p></td>
+    </tr>
+    <tr>
+      <td align="center" width="33%">
+      <p align="center">64 x 64 x 16</p></td>
+      <td align="center" width="33%">64</td>
+    </tr>
+    <tr>
+      <td align="center" width="33%">128 x 128 x 32</td>
+      <td align="center" width="33%">32</td>
+    </tr>
+    <tr>
+      <td align="center" width="33%">256 x 256 x 64</td>
+      <td align="center" width="33%">15</td>
+    </tr>
+  </tbody></table>
+  <p> </p>
+  <h3>Criterion 2: Exploratory Support</h3>
+  <p><em>Parameters used to manipulate the visualization:</em></p>
+  <p><em><b>Texture Advection and Flow visualization:</b></em></p>
+  <ul>
+  	<li><em>unnormalized vector field to distinguish the velocity of the flow On/Off</em></li>
+  	<li><em>normalized vector field to distinguish the direction of the flow On/Off</em></li>
+    <li><em>transferfunction for 4 materials (RGBA)</em></li>
+    <li><em>resolution of advected particles</em></li>
+    <li><em>amount of noise</em></li>
+    <li><em>blending parameters</em></li>
+    <li><em>clipping-plane</em></li>
+    <li><em>additional dye injection + dye options</em></li>
+    <li><em>Interaction with mouse and keys</em></li>
+  </ul>
+  <p><em><b>Scalar Field Representation:</b></em></p>
+  <ul>
+    <li><em>transferfunction for scalar values</em></li>
+    <li><em>2 x scrollbar to select range of velocity</em></li>
+    <li><em>1 x scrollbar to select range of lambda2</em></li>
+    <li><em>1 x scrollbar to select range of external scalar values</em></li>
+    <li><em>2 x scrollbars for additional blending manipulation </em></li>
+    <li><em>Texture Advection on selected Isosurfaces On/Off</em></li>
+  </ul>
+  <p><em><b>2D Selection Plane and 2D High-Resolution representation</b></em></p>
+  <ul>
+    <li><em>Selection Plane as additional Clipping Plane On/Off</em></li>
+    <li><em>Grid Representation on Selection Plane</em></li>
+    <li><em>High-Resolution Advection Representation</em></li>
+    <li><em>Zoom Plane</em></li>
+    <li><em>Interaction of Selection- and Zoomplane with mouse and keys</em></li>
+    <li><em>dye</em></li>
+    <li><em>amount of noise</em></li>
+    <li><em>resolution of advected particles</em></li>
+    <li><em>unnormalized vector field to distinguish the velocity of the flow On/Off</em></li>
+  	<li><em>normalized vector field to distinguish the direction of the flow On/Off</em></li>
+  </ul>
+  <p> </p>
+  <p><em>By the use of the scrollbars the user is able to combine the Flow
+  Visualization with any Scalar Representation. For example he selects a range
+  of lambda2 + a range of velocity + a 2D Selection Plane. </em></p>
+  <h3>Criterion 3: Multiple Characteristics</h3>
+  <h4><em>Visualization Performed 1 - flow</em></h4>
+  <p><em>3D Texture Advection + additional red Dye: 2 Materials (blue and green)
+  are advected time-dependently using a normalized vectorfield.</em></p>
+  <table style="border-collapse: collapse;" id="AutoNumber6" border="1" bordercolor="#111111" cellpadding="0" cellspacing="0" width="100%">
+    <tbody><tr>
+      <td align="center" width="50%">
+      <p align="center"><a href="images/Adv1f.jpg">
+<img src="images/Adv1.jpg" border="0" height="200" width="186"></a></p></td>
+      <td align="center" width="50%">
+      <p align="center"><a href="images/Adv2f.jpg">
+<img src="images/Adv2.jpg" border="0" height="200" width="186"></a></p></td>
+    </tr>
+  </tbody></table>
+  <p> </p>
+  <h4><em>Visualization Performed 2 - scalars: clouds, pressure, temperature</em></h4>
+  <p><em>Representing the clouds using a luminance setting of a small range of
+  the scalar values in the transferfunction.<br>
+  Also a small range of pressure and temperature was selected and mapped on a
+  red-green-blue color gradient.</em></p>
+  <table style="border-collapse: collapse;" id="AutoNumber7" border="1" bordercolor="#111111" cellpadding="0" cellspacing="0" width="100%">
+    <tbody><tr>
+      <td align="center" width="50%">
+      <a href="images/clouds1f.jpg">
+<img src="images/clouds1.jpg" border="0" height="188" width="200"></a></td>
+      <td align="center" width="50%">
+      <a href="images/pr1f.jpg">
+<img src="images/pr1.jpg" border="0" height="200" width="186"></a></td>
+    </tr>
+    <tr>
+      <td align="center" width="50%">
+      <p align="center"><a href="images/pr2f.jpg">
+<img src="images/pr2.jpg" border="0" height="200" width="186"></a></p></td>
+      <td align="center" width="50%">
+      <p align="center"><a href="images/temperaturef.jpg">
+      <img src="images/temperature.jpg" border="0" height="181" width="200"></a></p></td>
+    </tr>
+  </tbody></table>
+  <p> </p>
+  <h4><em>Visualization Performed 3 - lambda2 + flow</em></h4>
+  <p><em>3D Texture Advection + lambda2 scalar values: Here the transparency of
+  the Flow Visualization is very high (Set Alpha in the transferfunction -&gt; 0).
+  A big range of lambda2 is selected and mapped with purple and a high opacity.
+  Figure 3 shows a Flow Visualization with a higher opacity and white colored
+  lambda2 values.</em></p>
+  <table style="border-collapse: collapse;" id="AutoNumber8" border="1" bordercolor="#111111" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+      <td align="center">
+      <p align="center"><a href="images/vo2f.jpg">
+<img src="images/vo2.jpg" border="0" height="200" width="186"></a></p></td>
+      <td align="center" width="50%">
+      <p align="center"><a href="images/vo3f.jpg">
+<img src="images/vo3.jpg" border="0" height="200" width="186"></a></p></td>
+      <td align="center">
+      <p align="center"><a href="images/vo1f.jpg">
+<img src="images/vo1.jpg" border="0" height="200" width="186"></a></p></td>
+    </tr>
+  </tbody></table>
+  <p> </p>
+  <h4><em>Visualization Performed 4 - 2D Selection- and Zoom-Plane + Scalar
+  Visualization + 3D Texture Advection </em></h4>
+  <p><em>An additional 2D Selection Plane is inserted. A High-Resolution
+  Representation of the flow is mapped to the Zoom-Plane, using different
+  transferfuntions for the flow and the scalar values. Also 3D Texture Advection
+  is shown in Figure 1.</em></p>
+  <table style="border-collapse: collapse;" id="AutoNumber9" border="1" bordercolor="#111111" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+      <td align="center">
+      <p align="center"><a href="images/vo-pl1f.jpg">
+<img src="images/vo-pl1.jpg" border="0" height="215" width="200"></a></p></td>
+      <td align="center" width="50%">
+      <p align="center"><a href="images/Image310-T1f.jpg">
+<img src="images/Image310-T1.jpg" border="0" height="200" width="200"></a></p></td>
+      <td align="center">
+      <p align="center"><a href="images/Image310-T2f.jpg">
+<img src="images/Image310-T2.jpg" border="0" height="200" width="200"></a></p></td>
+    </tr>
+  </tbody></table>
+  <p> </p>
+  <h4><em>Visualization Performed 5 - 2D Selection- and Zoom-Plane + Scalar
+  Visualization + 3D Texture Advection + 2D Texture Advection</em></h4>
+  <p><em>Figure 1 shows a range of pressure mapped on a color gradient + a
+  blue-white 3D Texture Advection + the Selection Plane with active Zoom Plane.
+  The 2D Representation (with additional blue dye) shows the center of Isabel,
+  distinguished by the yellow Zoom Plane. In Figure 2 and 3 the 2D
+  representation is mapped to the Zoom Plane. Figure 4 shows the High-Resolution
+  2D representation, here 1024x1024 (using an interpolated vector field). <br>
+  Figure 6 shows the rotation of the hurricane using 2D texture advection with an unnormalized vector field</em></p>
+  <table style="border-collapse: collapse;" id="AutoNumber10" border="1" bordercolor="#111111" cellpadding="0" cellspacing="0" width="100%">
+    <tbody><tr>
+      <td align="center" width="50%">
+      <a href="images/pl1f.jpg">
+<img src="images/pl1.jpg" border="0" height="160" width="200"></a></td>
+      <td align="center" width="50%">
+      <a href="images/pl2f.jpg">
+<img src="images/pl2.jpg" border="0" height="160" width="200"></a></td>
+      </tr>
+    <tr>
+      <td align="center" width="50%">
+      <p align="center"><a href="images/pl3f.jpg">
+<img src="images/pl3.jpg" border="0" height="160" width="200"></a></p></td>
+      <td align="center" width="50%">
+      <p align="center"><a href="images/2df.jpg">
+<img src="images/2d.jpg" border="0" height="200" width="186"></a></p></td>
+      </tr>
+      <tr><td align="center">
+	        <p align="center"><a href="images/rot-plf.jpg">
+<img src="images/rot-pl.jpg" border="0" height="155"></a></p></td>
+<td align="center">
+      <p align="center"><a href="images/Adv-2Df.jpg">
+<img src="images/Adv-2D.jpg" border="0"></a></p></td>
+  </tr></tbody></table>
+  <p> </p>
+  <h3>Additional Comments</h3>
+  <p><em>none</em></p></div>
+
+</body></html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "../master.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title>IEEE Visualization Contest 2011, Data</title>
+<style type="text/css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.auto-style1 {
+	border-width: 0px;
+}
+.auto-style2 {
+	font-weight: normal;
+}
+.auto-style3 {
+	color: #677BCB;
+}
+.auto-style4 {
+	text-align: center;
+}
+</style>
+<!-- #EndEditable -->
+<link href="../styles/style1.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+<style type="text/css">
+.auto-style1 {
+	border-width: 0px;
+}
+</style>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33337454-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script></head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container" style="width: 841px">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<h1>IEEE Visualization Contest 2011</h1>
+		<h3>Official event of the VisWeek 2011</h3>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul style="width: 100%">
+			<li><a href="../index.html">Home</a></li>
+            <li><a href="../contributions/contributions.html">Contributions</a></li>
+			<li><a href="../questions/questions.html">Questions</a></li>
+			<li><a href="dataset.html">Data</a></li>
+     		<li><a href="../references/references.html">References</a></li>
+			<li><a href="../submission/submission.html">Submission</a></li>
+			<li><a href="../awards/awards.html">Awards</a></li>
+			<li><a href="../news/news.html">News</a></li>
+			<li><a href="../committee/committee.html">Committee</a></li>
+			<li style="width: 134px">
+			<a href="../acknowledgements/acknowledgements.html" style="width: 119px">Acknowledgements</a></li>
+		</ul>
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin content_container -->
+	<div id="content_container">
+		<!-- Begin Left Column -->
+		<div id="column_left">
+			<!-- #BeginEditable "content" -->
+			<h2>Data</h2>
+			<span style="mso-bidi-font-style:normal">
+			<p class="MsoNormal">
+			<strong>The data description is also available as </strong>
+			<a href="DataDescriptionVisContest.pdf"><strong>pdf</strong></a> 
+			(last update 15.06.2011). The donwload links can be found at the 
+			bottom of this page.<br />
+			<br />
+			We require that any publications (not the contest entries) using any 
+			of these datasets include the following acknowledgment: <br />
+			<em>The data is courtesy of the Institute of Applied Mechanics, 
+			Clausthal University, Germany (Dipl. Wirtsch.-Ing. Andreas Lucius).</em><br />
+			<br />
+			We provide 3 data sets of the same centrifugal pump, each obtained with a
+			different turbulence model. <span style="mso-bidi-font-style:normal">
+			In principle, there are three general approaches: LES, RANS, and the 
+			hybrid LES/RANS. Each approach represents a class of models; so for 
+			each approach, there are many more or less different models.</span></p>
+			<p class="auto-style4">
+			<span style="mso-bidi-font-style:normal">
+			<img height="247" src="../images/mesh.png" width="281" /><br />
+			<strong><em>The centrifugal pump uses a spinning &quot;impeller&quot; <br />
+			which has backward-swept blades.</em></strong></span></p>
+			<p class="MsoNormal">
+			<em><strong>The RANS model</strong></em><br />
+			The state of the art turbulence 
+			modelling is derived from averaging the Navier Stokes equation in 
+			time (Reynolds Averaged Navier Stokes, or RANS). During this 
+			averaging process the Reynolds stresses appear as additional unknown 
+			variables. Most models are based on the eddy viscosity concept, 
+			where the influence of turbulence fluctuations is modelled by the 
+			introduction of an additional eddy viscosity. These models are based 
+			on some crude assumptions and especially fail in strongly separated 
+			flows.<br />
+			<br />
+			<em><strong>The LES </strong></em><strong>model</strong><br />
+			Another approach for the computation of turbulent flow is the direct 
+			simulation of turbulence down to the grid size and modelling only 
+			turbulence at smaller scales. The LES (Large Eddy Simulation) 
+			approach requires very fine grids and time steps to resolve the 
+			important turbulent structures, which makes it unfeasible for high 
+			Reynolds number flows in complex industrial geometries.<br />
+			<br />
+			<em><strong>The hybrid LES / RANS</strong></em><strong> model</strong><br />
+			A mixed approach is hybrid LES / RANS modelling: a standard 
+			turbulence model is used for attached regions and switches to LES in 
+			strongly separated regions. This reduces the computational effort in 
+			comparison to pure LES and improves accuracy in comparison to pure 
+			RANS simulations.<br />
+			Nevertheless, massive parallelization is required to solve the 3D 
+			transient simulation modell.<br />
+			<br />
+			<br />
+			<span style="mso-bidi-font-style:normal">
+			<strong>Data description</strong></span><br />
+			<span style="mso-bidi-font-style:normal">
+			Each data set comprises one full rotation of the centrifugal pump
+			consisting of 80 time steps.
+			The numerical setup comprises 6.7 mio nodes and 6.4 mio 
+			cells,
+			respectively. The setup contains 2 stationary domains (inlet and diffuser) 
+			and the moving rotor domain.</span><br />
+			<br />
+			Because the hybrid models are the state-of-the-art today, two of the 
+			models we have chosen are from this class, namely <strong>DES</strong> 
+			and <strong>SAS</strong>.<br />
+			DES was derived from the LES approach, while SAS is based on the 
+			URANS (= Unsteady RANS) approach.<br />
+			<br />
+			The third model we have chosen, <strong>SST</strong>, is a model of 
+			the RANS class, which are the classical turbulence models, some of 
+			which exist for tens of years. We have chosen SST because it is one 
+			of the best in its class. <br />
+			<br />
+			<span style="mso-bidi-font-style:normal">
+			LES is (at least, currently) not feasible for complex geometries and 
+			high Reynolds numbers, because of the sheer amount of nodes 
+			necessary.</span><br />
+			<br />
+			<span style="mso-bidi-font-style:normal">
+			<span style="mso-bidi-font-style:normal">
+			See our
+			<a href="../references/references.html">reference section</a> for 
+			further information.</span></span></p>
+			<p class="MsoNormal">
+			<em>The visualization should look quite different when 
+			applied to the SST data set versus the other two hybrid models (DES 
+			and SAS): in the DES/SAS data sets, turbulent structures are 
+			resolved in massively separated regions. For this reason one should 
+			see much more detailed structures in comparison to the SST data set.
+			<br />
+			<br />
+			SST does not resolve turbulent fluctuations; only time-dependent 
+			average values can be computed. For the other two models turbulences 
+			can be directly resolved using a sufficiently dense grid.</em><strong><br />
+&nbsp;</strong></p>
+			<p class="MsoNormal">
+			<strong>Explaining the variables:<br />
+			</strong><span style="mso-ansi-language: EN-US">For each node, a 
+			couple of variables are available:<o:p></o:p></span></p>
+			<p class="MsoNormal">
+			<o:p>- pressure<br />
+			- total pressure<br />
+			- total pressure in stn frame<br />
+			- turbulence kinetic energy<br />
+			- velocity<br />
+			- velocity in stn frame</o:p></p>
+			<p class="MsoNormal"><i style="mso-bidi-font-style: normal">
+			<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US">
+			Pressure:</span></i><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US"> 
+			static pressure<o:p></o:p></span></p>
+			<p class="MsoNormal"><i style="mso-bidi-font-style: normal">
+			<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US">
+			Total pressure:</span></i><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US">
+			<br />
+			static pressure plus kinetic energy of the relative velocity in 
+			pressure units<o:p></o:p></span></p>
+			<p class="MsoNormal"><i style="mso-bidi-font-style: normal">
+			<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US">
+			Total pressure in stn frame (=Total pressure in 4):</span></i><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US">
+			<br />
+			static pressure plus kinetic energy of the absolute velocity<o:p></o:p></span></p>
+			<p class="MsoNormal"><i style="mso-bidi-font-style: normal">
+			<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US">
+			Turbulence kinetic energy (=Turbulence kinetic 5):</span></i><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US">
+			<br />
+			kinetic energy of the turbulent fluctuations of the velocity. Using 
+			SST, the whole turbulence is modeled (k-Omega model, k is the 
+			turbulent kinetic energy). With SAS or DES the modeled kinetic 
+			energy is clearly smaller as the turbulent fluctuations in the flow 
+			field are resolved.<o:p></o:p></span></p>
+			<p class="MsoNormal"><i style="mso-bidi-font-style: normal">
+			<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US">
+			Velocity:</span></i><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US">
+			<br />
+			velocity in the relative system (rotating with the impeller)<o:p></o:p></span></p>
+			<p class="MsoNormal"><i style="mso-bidi-font-style: normal">
+			<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US">
+			Velocity in stn frame (=Velocity in Stn Fr 7):</span></i><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US">
+			<br />
+			velocity in absolute system (observed from fixed generator casing).<o:p></o:p></span></p>
+			<p class="MsoNormal">
+			<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; mso-ansi-language: EN-US"><o:p>
+			<em>Both velocities (velocity / velocity in stn frame) are 
+			differentiated only in the rotating part. In the stationary part, 
+			only one velocity exists. For example, if one would like to view the 
+			vortices within the impeller, the relative velocity has to be used. 
+			For questions regarding the energy transfer in balance equations, 
+			the absolute velocity is important.<br />
+			As there are two different velocities, there are also two different 
+			formulations of the total pressure.</em></o:p></span></p>
+			<p class="MsoNormal">
+			<a name="absoluteVelocity"><strong>A word about the terms "absolute 
+			velocity" (= "velocity in stn frame") and "relative velocity" (new 
+			15.06.2011)</strong></a><br />
+			First of all, all vectors and points are defined in a global 
+			Cartesian coordinate system, which is the same for all different 
+			kinds of velocity.<br />
+			The fluid at a point <em>p</em> in space has some absolute velocity
+			<em>c</em>.<br />
+			If this point <em>p</em> is a point on the surface of the rotor, it 
+			moves on a circle around the axis of the rotor; this point <em>p</em>, 
+			then, has some other velocity <em>u</em> (which is exactly 
+			tangential to the circle). Thus, we can define the 'relative 
+			velocity' <em>w</em> of the fluid at <em>p</em>, which is <em>w</em> 
+			= <em>c - u</em>.<br />
+			<br />
+			In other words, an observer sitting at <em>p</em> and moving along 
+			with <em>p</em> (but always looking in the same direction in the 
+			global coordinate system!) would observe the fluid in point <em>p</em> 
+			moving with a velocity <em>w</em>, while an observer sitting still 
+			relative to the global coordinate system would observe that same 
+			fluid in point <em>p</em> having velocity <em>c</em>.<br />
+			<br />
+			The velocity of point <em>p</em> can be derived from the rotational 
+			velocity <em>omega</em> of the rotor by <em>u = omega x r</em>, 
+			where <em>r</em> is the vector from the rotor's axis to <em>p</em> 
+			(and perpendicular to the axis).<br />
+			<br />
+			These notions can, of course, be extended to any point in the domain 
+			of the rotor. In addition, it is understood that all vectors and 
+			positions are functions of time.<br />
+			<br />
+			PS: <em>why would one want to express the same velocity in two 
+			different ways?<br />
+			</em>Because some differential equations are easier when expressed 
+			over the relative velocity, while others are easier when expressed 
+			over absolute velocity.<br />
+			<br />
+			<strong><a name="grid">A word about the grids:</a><br />
+			</strong>Even though the rotor physically moves in time with 
+			constant rotational speed, the flow inside the rotor is calculated 
+			with a stationary grid. The relative movement of rotor and stator 
+			domains is captured with the usage of transient rotor stator 
+			interfaces. The interface properly connects the nodes on both sides 
+			at rotated position.<br />
+			For that reason the geometry is static for all files. (If the 
+			original data is post processed with CFX, the rotation of the grid 
+			is automatically done.) For any other tool the rotation needs to be 
+			done by the user. Despite the fact that rotation of the impeller is 
+			physical, analysis may be more appropriate for a stationary rotor 
+			depending on the task. Tracking the movement of vortical structures 
+			is easier without superposition of the rotation of the rotor.<br />
+			For your information: the rotor domain contains all volume elements 
+			named with &quot;ROTOR_VOL&quot;. It rotates with a velocity of -600 
+			revolutions per minute around the Z axis (using the right-hand 
+			rule). The time step between two transient files is 1.25E-3 seconds, 
+			which corresponds to 4.5 degrees.<br />
+			<br />
+			<strong><a name="dummy">A bit more about the names of the elements:</a></strong><br />
+			The following surface elements are also part of the rotor volume:<br />
+			-
+			&quot;Bodenscheibe&quot;, <br />
+			- &quot;Deckscheibe&quot;, <br />
+			- &quot;Deckscheibe Spalt&quot;, <br />
+			- &quot;LR Diffusor&quot;, 
+			<br />
+			- &quot;Schaufel&quot;, <br />
+			- &quot;Spalt Gehaeuse&quot;<br />
+			<br />
+			The following surface elements are the interfaces:<br />
+			-
+			&quot;Eintritt Rotor 1 Side 2&quot;<br />
+			- &quot;Eintritt Rotor 2 Side 2&quot;<br />
+			- &quot;Rotor 
+			Diffusor Side 1&quot;<br />
+			- &quot;Spalt SS Side 1&quot;</p>
+			<p class="MsoNormal">
+			<strong><br />
+			File Formats</strong><br />
+			The data can be downloaded in two different formats,<br />
+			<em>Ansys 12.0 CFX</em> and <em>EnSight</em>.<br />
+			<br />
+			The Ansys CFX files might be useful for people already<br />
+			having an Ansys license.<br />
+			<br />
+			The EnSight files can be imported by many applications and libraries 
+			(e.g., <a href="http://www.vtk.org/">VTK</a>,
+			<a href="http://www.paraview.org/">ParaView</a>,
+			<a href="https://wci.llnl.gov/codes/visit/">VisIt</a>) and might 
+			also be useful for people who have already a 
+			EnSight license, or participants can use EnSight CFD Free edition,
+			<a href="http://www.ensightcfd.com">www.ensightcfd.com</a>. EnSight 
+			standard trial licenses will be provided upon request (write an 
+			email to <a href="mailto:eric@ensight.com">Eric O&#39;Connell</a>). EnSight CFD 
+			Free version does not require a license and can be simply downloaded 
+			and used without a license key. <br />
+			<br />
+			The EnSight files are ASCII files, so they can be loaded<br />
+			by home-grown visualization software. The files are in the <em>EnSight 
+			Case Gold</em> format, which is described in Chapter 12 of the EnSight 
+			User Manual, which can be downloaded here:<br />
+			<br />
+			<a href="http://www.ensight.com/Download-document/180-User-Manual.html">
+			http://www.ensight.com/Download-document/180-User-Manual.html</a><br />
+			<br />
+			<em>If you would like to get a copy of the data in another format, 
+			please contact us, and we will see whether we can do something for 
+			you. </em>
+			<br />
+			<span style="mso-bidi-font-size:
+10.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:DE">
+			<span style="mso-bidi-font-style:normal">
+			<strong><br />
+			Test data<br />
+			</strong>If you would like to develop your own loader for the<br />
+			EnSight files, you might want to test your loader with<br />
+			the following toy example.
+			<strong><br />
+			<br />
+			<span style="mso-bidi-font-style:normal">
+			<span style="mso-bidi-font-size:
+10.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:DE">
+			<strong class="auto-style2">EnSight Gold file format: 
+			<a href="2DstepEnsightGold.zip">
+			<span class="auto-style3">download</span></a></strong></span></span><br />
+			</strong></span></span></p>
+			<p class="MsoNormal">
+			<span style="mso-bidi-font-size:
+10.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:DE"><strong>
+			<a href="../images/testData.png">
+			<img alt="" class="auto-style1" height="189" src="../images/testDataThumb.png" width="339" /></a></strong><br />
+			<strong><em>Visualization of the test data. In this case, 
+			the scalar &quot;Eddy_Viscosity&quot; is used.<br />
+			</em></strong><br />
+			</span></p>
+			<p class="MsoNormal">
+			<span style="mso-bidi-font-style:normal">
+			<span style="mso-bidi-font-size:
+10.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:DE">
+			<strong>Contest data</strong><br />
+			<br />
+			</span>
+			</span>
+			<span style="mso-bidi-font-size:
+10.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:DE">
+			<span style="mso-bidi-font-style:normal">
+			All 3 data sets in both formats (CFX / EnSight) can be downloaded from following two locations 
+			<ul><li><a href="https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2011/data/download.html">
+			 SDSC Cloud</a> 
+			 </li><li><a href="http://midas3.kitware.com/midas/folder/5711">Kitware Server</a>
+			 </li></ul>
+			<strong><br />
+			<br />
+			<span style="mso-bidi-font-style:normal">
+			<span style="mso-bidi-font-size:
+10.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:DE">
+			Note the LARGE file size and ensure sufficient disk space 
+			when extracting. The extracted files will need about 500GB.</span></span><br />
+			</strong><br />
+			<span style="mso-bidi-font-style:normal">
+			<br />
+			<strong>Acknowledgements</strong><br />
+			The data is courtesy of the 
+			Institute of Applied Mechanics, Clausthal University, Germany (Dipl. 
+			Wirtsch.-Ing.&nbsp;Andreas Lucius)<strong class="auto-style2">.<br />
+			</strong>
+			</span><br />
+			<span style="mso-bidi-font-style:normal">
+			Web and data hosting 
+			for VisContest is provided by courtesy of SDSC, TeraGrid and  
+			Clausthal University.</span><br />
+			</span></span>
+			</span><br />
+			</p>
+			<!-- #EndEditable --></div>
+		<!-- End Left Column -->
+		<!-- Begin Right Column -->
+		<div id="column_right">
+			<!-- #BeginEditable "sidebar" -->
+			<h4>Early Registration</h4>
+			<p>
+			<a href="http://visweek.org/visweek/2011/info/registration/conference-registration">
+			September 16th, 2011</a></p>
+			<h4>Notification</h4>
+			<p>September, 9th, 2011</p>
+			<h4>Deadline</h4>
+			<p>July, 31st, 2011,<br />
+			23:59 PST</p>
+			<h4>Contact</h4>
+			<p><a href="../contact/contact.html">Email &amp; Mailing list</a></p>
+			<!-- #EndEditable --></div>
+		<!-- End Right Column -->
+		<!-- Begin Footer -->
+		<div id="footer">
+			<p>
+			<table style="width: 100%">
+				<tr>
+					<td style="height: 49px; ">
+					<a href="http://www.computer.org/">
+					<img alt="" height="45" src="../images/ieee_logo.png" width="151" class="auto-style1" /></a></td>
+					<td style="height: 49px; ">
+					&nbsp;<a href="http://www.mevis.fraunhofer.de/"><img alt="" height="30" src="../images/fme_logo.png" width="110" class="auto-style1" /></a></td>
+					<td style="height: 49px; ">
+					&nbsp;<a href="http://cg.in.tu-clausthal.de/"><img alt="" height="25" src="../images/tuc2005.gif" width="136" class="auto-style1" /></a></td>
+					<td style="width: 86px; height: 49px">
+					&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+					Web and data hosting is provided by courtesy of SDSC, TeraGrid 
+					and Clausthal University.<br />
+					(c) 2010/2011 - IEEE Vis Contest 2011, Jan Klein, Gabriel Zachmann<br />
+					Last update March, 27th, 2012</td>
+					<td>
+					<a href="http://www2.clustrmaps.com/user/d22bdf65">
+					<img src="http://www2.clustrmaps.com/stats/maps-no_clusters/viscontest.sdsc.edu-2011--thumb.jpg" alt="Locations of visitors to this page" height="21" width="36" /></a></td>
+				</tr>
+			</table>
+			</p>
+		</div>
+		<!-- End Footer --></div>
+	<!-- End content_container --></div>
+<!-- End Container -->
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

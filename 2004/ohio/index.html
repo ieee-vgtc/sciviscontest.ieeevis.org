@@ -1,0 +1,199 @@
+<html><head><title>IEEE Visualization 2004 Contest</title>
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-33337454-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</head>
+  <body bgcolor="white" vlink="blue">
+    <div style="width: 40em; padding-left: 2em;">
+
+      <h1>IEEE Visualization 2004 Contest Entry</h1>
+
+      <p>
+        PDF: <a href="report.pdf"><em>Link to PDF Document</em></a>
+        <br>
+        Video: <a href="ohio.mov"><em>Link to Video</em></a>
+      </p>
+
+      <h2><em>Visualization Fusion: Hurricane Isabel Dataset</em></h2>
+
+      <h3>Authors</h3>
+      <ul>
+        <li><em>
+          <a href="http://www.cse.ohio-state.edu/%7Ejiang/">
+          Ming Jiang</a>,
+          The Ohio State University, jiang@cse.ohio-state.edu
+        </em></li>
+        <li><em>
+          <a href="http://www.cse.ohio-state.edu/%7Eshareef/">
+          Naeem Shareef</a>,
+          The Ohio State University, shareef@cse.ohio-state.edu
+        </em></li>
+        <li><em>
+          <a href="http://www.cse.ohio-state.edu/%7Ezhangc/">
+          Caixia Zhang</a>,
+          The Ohio State University, zhangc@cse.ohio-state.edu
+        </em></li>
+        <li><em>
+          <a href="http://www.cse.ohio-state.edu/%7Ecrawfis/">
+          Roger Crawfis</a>,
+          The Ohio State University, crawfis@cse.ohio-state.edu
+          </em></li>
+        <li><em>
+          <a href="http://www.cse.ohio-state.edu/%7Eraghu/">
+          Raghu Machiraju</a>,
+          The Ohio State University, raghu@cse.ohio-state.edu
+        </em></li>
+        <li><em>
+          <a href="http://www.cse.ohio-state.edu/%7Ehwshen/">
+          Han-Wei Shen</a>,
+          The Ohio State University, hwshen@cse.ohio-state.edu
+        </em></li>
+      </ul>
+
+      <h3>Contest Entry Visualization System</h3>
+
+      <p>Our main goal in developing visualization techniques for the
+          Hurricane Isabel dataset is to engender better understanding
+	  of the underlying physical phenomenon. Our primary
+	  contribution is adapting a set of existing algorithms and
+	  devising an overall framework for applying them to the
+	  dataset. In particular, we applied several vortex detection
+	  algorithms to the time varying dataset in order to
+	  automatically identify the various parts of the hurricane. We
+	  then developed a framework to track the position of the
+	  hurricane across time, while computing both its
+	  translational velocity and maximum wind speed. Finally, we
+	  experimented with several volume rendering techniques to
+	  better understand some of the physical properties of the
+	  dataset.</p>
+
+      <h3>Criterion 1: Interactivity</h3>
+
+      <p>In order to handle large-scale time-varying datasets,
+	  interactivity would be a nice feature to have; however,
+	  that's not the only viable option. In fact, automatic
+	  processing, where there is little or no user interaction
+	  required, is also a desired feature. The bottom line is that
+	  the user wants to expend as little time as possible handling
+	  the dataset, whether it's through fast interaction or no
+	  interaction.</p>
+
+      <p>Toward this end, we experimented with several existing vortex
+	  detection algorithms in order to automatically identify the
+	  various structures of the hurricane, starting from the
+	  central region. We applied four popular vortex detection
+	  algorithms to the dataset: combinatorial method (white),
+	  normalized helicity (magenta), lambda2 method (yellow), and
+	  swirl parameter (cyan). However, none of them worked
+	  properly for this dataset. One of the main reasons for this
+	  is because the eye of the hurricane -- the vortex core --
+	  does not exhibit any kind of swirling motion.</p>
+
+      <center>
+      <a href="images/comb08.png">
+      <img src="images/comb08s.png" border="0"></a>
+      <a href="images/heli08.png">
+      <img src="images/heli08s.png" border="0"></a>
+      <br>
+      <a href="images/lamb08.png">
+      <img src="images/lamb08s.png" border="0"></a>
+      <a href="images/swir08.png">
+      <img src="images/swir08s.png" border="0"></a>
+      </center>
+
+      <h3>Criterion 2: Exploratory Support</h3>
+
+      <p>To overcome the aforementioned problem, we developed a
+	  framework to automatically identify the central region of
+	  the hurricane. It utilizes a technique that detects vortices
+	  as regions of low pressure. In order to automate this
+	  process for all time steps, we introduced a local minimum
+	  velocity magnitude criterion. Thus the eye of the hurricane
+	  lies within a region of low pressure with a local minimum
+	  velocity magnitude.</p>
+
+      <p>The left figure below shows the results from applying this
+	  framework to the dataset at time step 48. An isosurface is
+	  extracted for the low pressure; the surface is colored using
+	  the velocity magnitude. What's unique about this framework
+	  is that it can correctly identify the central region of the
+	  hurricane without introducing any artifacts. The right
+	  figure below shows the results from performing hurricane
+	  tracking after automatically identifying the central region
+	  of the hurricane for all time steps. Iconic visualization is
+	  used to illustrate the path of the hurricane, the eye of the
+	  hurricane at each time step (the spheres), the translational
+	  velocity (the arrows), and the maximum wind speed (the
+	  colors).</p>
+
+      <center>
+      <a href="images/pres48.png">
+      <img src="images/pres48s.png" border="0"></a>
+      <a href="images/icon48.png">
+      <img src="images/icon48s.png" border="0"></a>
+      </center>
+
+      <h3>Criterion 3: Multiple Characteristics</h3>
+
+      <p>We use volume rendering as a tool to visualize and explore
+	  three key components used in most vortex detection
+	  algorithms: velocity magnitude, vorticity magnitude, and
+	  complex eigenvalues. Emission only rendering shows the
+	  accumulation of attribute values in the viewing direction to
+	  give overall structural information about the scalar
+	  field. Maximum Projection can show hot spots where maximum
+	  values occur.</p>
+
+      <p>The figures below show the results from applying the emission
+	  only and maximum projection to time step 8 of the
+	  dataset. The top figure shows the results for the velocity
+	  magnitude. The hotspots correspond to regions where there is
+	  high wind speed. The middle figure shows the results for the
+	  vorticity magnitude. The hotspots correspond to regions
+	  where there are large amounts of local rotation -- this can
+	  be useful for interpreting where the hurricane is likely to
+	  be most destructive. To reinforce this notion, the bottom
+	  figure shows the results for the complex eigenvalues of the
+	  velocity gradient tensor. The emission only image shows two
+	  sets of spirals: the larger one surrounding the hurricane
+	  eye, and the smaller one surrounding the hotspots arising on
+	  top of Florida.</p>
+
+      <center>
+      <a href="images/velo_grey08.png">
+      <img src="images/velo_grey08s.png" border="0"></a>
+      <a href="images/velo_color08.png">
+      <img src="images/velo_color08s.png" border="0"></a>
+      <br>
+      <a href="images/vort_grey08.png">
+      <img src="images/vort_grey08s.png" border="0"></a>
+      <a href="images/vort_color08.png">
+      <img src="images/vort_color08s.png" border="0"></a>
+      <br>
+      <a href="images/comp_grey08.png">
+      <img src="images/comp_grey08s.png" border="0"></a>
+      <a href="images/comp_color08.png">
+      <img src="images/comp_color08s.png" border="0"></a>
+      </center>
+
+      <hr>
+      <center>
+      <a href="../">
+      <img src="images/vis04_logo.png" border="0" hspace="50"></a>
+      <a href="http://www.cse.ohio-state.edu/research/graphics/">
+      <img src="images/osu_logo.png" border="0" hspace="50"></a>
+      </center>
+
+    </div>
+  </body></html>

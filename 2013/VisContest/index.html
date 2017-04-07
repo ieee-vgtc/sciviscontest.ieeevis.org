@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>2013 IEEE Scientific Visualization Contest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/jquery.countdown.css" rel="stylesheet">
+	<!--    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+    <script src="../assets/js/email.js"></script>
+    <style type="text/css">
+      body {
+	  min-width: 900px;
+      }
+
+
+	  section {
+	  padding-top: 30px;
+	  }
+
+	  .widgets-sidebar {
+	  padding-top: 30px;
+	  text-align: center;
+	  }
+
+	  .widgets-sidebar.affix {
+	  top: 60px;
+	  }
+
+	  .img-sidenav {
+	  margin-top:10px;
+	  }
+
+	  #logo-aibs {
+	  margin-top: 20px;
+	  margin-left: 30px;
+	  }
+
+	  #logo-ieee {
+	  margin-left: 55px;
+	  }
+
+	  #logo-sdsc {
+	  margin-left: 30px;
+	  }
+
+	  #clustrmaps-widget {
+	  margin-left: 50px;
+	  }
+
+	  #timer-widget {
+	  margin-left: 90px;
+	  width: 80px;
+	  }
+
+	  #change-widget {
+	  margin-left: 73px;
+	  }	  
+
+	  img.brain-img {
+	  height: 183px;
+	  width: 300px;
+	  max-width: 300px;
+	  }
+
+	  img.thumb-img {
+	  height: 119px;
+	  width: 187px;
+	  max-width: 187px;
+	  }
+
+	  img.levels-img {
+	  height: 300px;
+	  width: 242px;
+	  max-width: 242px;
+	  }
+
+	  header {
+	  padding-top: 60px;
+	  }
+
+	  .navbar-inner {
+	  padding-left: 10px !important;
+	  }
+
+	  .footer {
+	  font-size: 9pt;
+	  }
+	  
+    </style>
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar">
+
+	<!-- navigation bar fixed on top -->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+		  <ul class="nav">
+			<li class="active"><a class="brand" href="#overview">2013 Contest</a></li>
+			<li><a href="#data">Data</a></li>
+			<li><a href="#tasks">Tasks</a></li>
+			<li><a href="#download">Download</a></li>
+			<li><a href="#news">News</a></li>
+			<li><a href="#submission">Submission</a></li>
+			<li><a href="#awards">Awards</a></li>
+			<li><a href="#contact">Contact</a></li>
+		  </ul>
+        </div>
+      </div>
+    </div>
+
+	<!-- page header -->
+	<header class="jumbotron subhead" id="overview">
+	  <div class="container">
+		<h1>2013 IEEE Scientific Visualization Contest</h1>
+		<p class="lead">Official Event of VIS 2013</p>
+	  </div>
+	</header>
+
+
+	<div class="container-fluid">
+      <div class="row-fluid">
+
+		<!-- widgets on the side -->
+		<div class="span3">
+		  <table class="widgets-sidebar">
+			<tr><td><div id="timer-widget" class="img-sidenav"></div></td></tr>
+			<tr><td>
+				<div id="change-widget" class="img-sidenav">
+				  <table style="width:100px;  font-family: arial, helvetica;"  border=0 cellpadding=0 cellspacing=0>
+					<tr><td bgcolor="#999999" align=center>
+						<span style="color:white; font-size: 12px; font-weight:normal; letter-spacing: 1px;">Be notified of<br>page updates</span>
+					  </td>
+					<tr><td>
+						<form style="margin-bottom:0;" action="http://www.changedetection.com/detect.html" method="get" target=ChangeDetectionWiz>
+						  <input style="width:100px;" TYPE="TEXT" NAME="email"  value="enter email">
+						  <table style="font-family: arial, helvetica;" width="100%" border=0 cellspacing=0 cellpadding=0>
+							<tr>
+							  <td align=left valign=top>
+								<small>
+								  <input type="submit" name="enter" value=" OK "
+										 onclick="somewin=window.open('http://www.changedetection.com/detect.html', 'ChangeDetectionWiz','resizable=yes,scrollbars=yes,width=624,height=460');somewin.focus()">
+								</small>
+							  </td>
+							  <td align=right valign=top>
+								<a href="http://www.changedetection.com/privacy.html" target=ChangeDetectionPrivacy
+								   onclick="somewin=window.open('http://www.changedetection.com/privacy.html', 'ChangeDetectionPrivacy','resizable=yes,scrollbars=yes,width=624,height=390');somewin.focus()"><span style="font-size: 10px">it's private</span></a><br>
+							  </td>
+							</tr>
+						  </table>
+						</form>
+					</td></tr>
+					<tr style="height:14px;"><td style="font-size: 10px; " align=center valign=bottom >
+						<a  href="http://www.changedetection.com/">ChangeDetection</a>
+					</td></tr>
+				  </table>
+				</div>
+			</td></tr>
+			<tr><td>
+				<div id="clustrmaps-widget" class="img-sidenav"></div>
+				<script type="text/javascript">var _clustrmaps = {'url' : 'http://sciviscontest.visweek.org/2013/', 'user' : 1048840, 'server' : '4', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2012-10-03', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www4.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script>
+				<noscript><a href="http://www4.clustrmaps.com/user/029100108"><img src="http://www4.clustrmaps.com/stats/maps-no_clusters/sciviscontest.visweek.org-2013--thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+			</td></tr>
+			<tr><td>
+				<img id="logo-aibs" class="img-sidenav" src="../assets/img/logo_AIBS.png" />
+			</td></tr>
+			<tr><td>
+				<img id="logo-ieee" class="img-sidenav" src="../assets/img/ieee_logo.jpg" />
+			</td></tr>
+			<tr><td>
+				<img id="logo-sdsc" class="img-sidenav" src="../assets/img/sdsc_logo.jpg" />
+			</td></tr>
+		  </table>
+		</div>
+
+		<div class="span9">
+		  <section>
+			<h3> Overview </h3>
+			<div class="row-fluid">
+			  <div class="span7"> 
+				<p>
+				  The IEEE 2013 SciVis Contest is an official event of the IEEE VIS 2013 conference, which will be held in Atlanta, GA (October 13 - 
+18, 
+2013).  This year's contest will target the exciting domain of developmental neuroscience.  Specifically, contest participants will help identify spatial and temporal gene expression patterns in the developing mouse brain.  
+				</p>
+				<p>
+				  By participating in this contest, you can demonstrate your novel visualization and interaction techniques <b>and simultaneously</b> help to profile genes functionally relevant to brain development or developmental brain disorders.  
+				</p>
+				<p>
+				  The Allen Institute for Brain Science has made the Allen Developing Mouse Brain Atlas data set available for use for the contest, but the Institute is not an official sponsor of the contest.
+				</p>
+				<p> 
+				  <b> IMPORTANT UPDATE </b> - The data set has changed! See the <a href="#news">News</a> section below for details.
+                                  <b> IMPORTANT UPDATE 2 </b> - The contest deadline has been extended!  You now have until September 2 to make your submission.  See the <a href="#submission">Submission</a> section for details. If you are planning to make a submission, please email the contest organizers at the addresses listed in the <a href="#contact">Contact</a> section.
+				</p>
+			  </div>
+			  <div class="span5">
+				<img class="brain-img" src="../assets/img/sagittal-160.jpg" />
+			  </div>
+			</div>
+		  </section>
+
+		  <section id="data">
+			<div class="page-header">
+			  <h3>Data Description</h3>
+			</div>
+
+			<div class="row-fluid">
+			  <div class="span9">
+				<p>
+				  The data set tracks the level of gene expression for ~2000 genes in a 3D mouse brain from embryonic stages through adulthood.  These expression levels are recorded within annotated 3D regions that change size and shape (and even divide) during development.  The genes are organized into 11 categories.
+				</p>
+				<p>
+				  The ~2000 genes in the Atlas are characterized by <a href="https://en.wikipedia.org/wiki/In_situ_hybridization"><i>in situ</i> hybridization (ISH)</a> across three embryonic and three early postnatal ages.  ISH is a technique for labeling cells expressing a particular mRNA sequence.  In ISH parlance, a <a href="https://en.wikipedia.org/wiki/Hybridization_probe">probe</a> is the RNA sequence hybridized to a tissue specimen, but for practical purposes a probe usually only covers a subset of the entire gene sequence. As a result, <b>there can be multiple probes, and therefore multiple image volumes, for a single gene</b>.  Brain sections are treated and imaged at high resolution, at which point an automatic cell segmentation algorithm quantifies regional expression.  
+				</p>
+
+			  </div>
+			  <div class="span3">
+				<img class="thumb-img" src="../assets/img/animatedThumb.gif" />
+			  </div>
+			</div>
+
+			<p>
+			  Expression levels of different genes can only be compared to each other when the images have been registered to a common reference space.  Because the morphology of the developing mouse brain varies dramatically from stage-to-stage, each stage has its own reference space.  To generate a reference space:
+			</p>
+
+			<ol>
+			  <li> a set of brain sections are custom-labeled to emphasize structural boundaries. </li>
+			  <li> expert neuroanatomists hand-annotate structural delineations in these sections. </li>
+			  <li> section images are co-registered and stacked into a 3D volume. </li>
+			  <li> the registration transforms are re-applied to the structure annotations, resulting in a 3D annotation volume. </li>
+			</ol>
+
+			<p>
+			  ISH images and expressing cell segmentations are similarly co-registered into a 3D volume, which is then directly aligned with reference volume for that specimen's developmental stage.  The expression values released in the contest data set are a measure of the sum of expressing pixel intensities within a reference space voxel divided by the total number of pixels in that voxel.  This is called <b>expression energy</b>.
+			</p>
+
+			<div class="row-fluid">
+			  <div class="span8">
+				<p>
+				  Comparing expression values across developmental stages is a key part of the visualization challenge.  Individual voxels cannot be compared across stages, however structure-level statistics can be.  One can compare the expression energies between entire stuctures, rather than just a single voxel.  This is also non-trivial, however.  The ontology of developing mouse brain structures is not only <b>hierarchical</b>, but also <b>time-varying</b>. In the earliest stages of development, the mouse brain has only a few gross structures, which gradually divide into more complex structures over time.  These temporal subdivisions are called <b>levels</b> in the data.  How do you compare two developmental stages to each other when they don't have the same set of structures?  This is one area we hope that you will help.
+				</p>
+				<p>
+				  <b>To summarize</b>, the data set consists of:
+				</p>
+
+				<ul>
+				  <li> ~12,000 expression energy volumes (6 stages x ~2000 genes) </li>
+				  <li> structure-level expression energy values for all genes </li>
+				  <li> a hierarchical, time-varying structure ontology </li>
+				  <li> 6 volumes of structure annotation ids, one for each stage </li>
+				  <li> 6 reference atlas volumes, one for each stage </li>
+				  <li> 11 gene categories, associated with various genes </li>
+				</ul>
+
+			  </div>
+			  <div class="span4">
+				<img class="levels-img" src="../assets/img/levels.png" />
+
+			  </div>
+			</div>
+			
+			<p>
+			  Expression energy volumes, reference atlas volumes, and annotation volumes are stored as Meta Images (.mhd), which is readily readable by VTK, ITK, and applications like ParaView which are built atop these toolkits.  Note that the reference atlas volumes have much larger dimensions than the energy and annotation volumes.  Taking into account the physical spacing between voxels, however, all of the volumes have the same (physical) size.  Spacing values listed in the Meta Image headers are all in micrometers.  
+			</p>
+
+			<p>
+			  Some voxels in the expression energy volumes have a value of "-1".  This value indicates that there was an error in the ISH processing pipeline and that there is no data in that voxel.  A negative value was chosen to distinguish between "zero energy" and "error".  
+			</p>
+
+			<p>
+			  The structure-level expression energy values are stored in a separate CSV file per probe.  Each row of the CSV describes the combined expression energy of all voxels within a labeled structure.  The number of structures will differ from probe to probe because a) the number of structures varies between stages and b) no data was successfully captured in that structure.  A missing structure can only be interpreted as "no data", <b>not</b> "no energy".
+			</p>
+	              
+	                <p>
+                          If you would like to use the data set outside the scope of this contest, you are agreeing to bound to the Allen Institute's terms of use 
+found <a href="http://www.alleninstitute.org/Media/policies/terms_of_use_content.html"> here </a>.
+			
+		  </section>
+
+		  <section id="tasks">
+			<div class="page-header">
+			  <h3>Tasks</h3>
+			</div>
+
+			<p> 
+			  The Allen Developing Mouse Brain Atlas was developed to help the neuroscience community investigate how gene expression  changes throughout the process of development in the mouse brain.  The contest will focus on answering the following questions, in decreasing order of importance:
+			</p>
+			
+			<ol>
+			  <li>
+				<b>Gradient Identification:</b> which genes exhibit directional expression patterns?  For example, in the cortex, <a href="http://en.wikipedia.org/wiki/Anatomical_terms_of_location#Other_directional_terms">rostral-to-caudal</a> gradients indicate involvement with development, whereas exterior-to-interior gradients are involved with layering.  Which categories do these genes belong to?
+			  </li>
+			  <li>
+				<b>Structural Patterns:</b> which genes show strong expression in a small set of structures but little expression elsewhere?  How do these patterns change throughout development?  Which categories do these genes belong to?
+			  </li>
+			  <li>
+				<b>Structure Consistency:</b> which structures have the most consistent expression patterns over time?  Which structures are the least consistent?  Which structures most resemble each other?  This is particularly interesting if the structures are not neighboring.  How do the answers change if you restrict the expression patterns to a single gene category?
+			  </li>
+			  <li>
+				<b>Complementary Patterns:</b> which genes have expression patterns that complement each other within a structure?  Are these patterns persistent during development?  Which categories do these genes belong to?
+			  </li>
+			</ol>
+
+		  </section>
+
+		  <section id="download">
+			<div class="page-header">
+			  <h3>Download</h3>
+			</div>
+
+			<p> 
+			  Gene expression energy volumes, annotation volumes, and reference volumes are being released as Meta images (.mhd), which are readable by VTK, ITK, and other common software libraries.  The ontology, gene meta data, and categories, are stored in simple CSV files.  All of this is being graciously hosted on the SDSC cloud.  Gene meta data is listed on a <b>probe-by-probe</b> basis, so be aware that <b>there can be multiple probes for a single gene</b>.  Visit this link to download the data:
+			</p>
+			<p>
+			  <a href="https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2013">https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2013</a>
+			</p>
+
+			<p>
+			  Linux users can run this simple wget command:
+			</p>
+
+			<code>
+			  $ wget -r -nH --no-parent --no-check-certificate https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2013/
+			</code>
+
+			<p></p>
+
+			<p>
+			  <b>UPDATE</b> (July 1) - With the release of the updated data announced in the <a href="#news">News</a> section, you'll see that the SDSC cloud link contains a <tt>data</tt>, <tt>data_v2</tt>, and <tt>data_v3</tt> directory.  We recommend that you only download one of these directories, as they are quite large.  You could modify your wget command as follows:
+			</p>
+
+			<code>
+			  $ wget -r -nH --no-parent --no-check-certificate https://cloud.sdsc.edu/v1/AUTH_sciviscontest/2013/data_v3/
+			</code>
+
+			<h4> Allen Institute API  </h4>
+			<p>
+			  All data released by the Allen Institute, including the data in this contest, was retrieved using the Institute's public API.  The python scripts that download this data set are available on github:
+			</p>
+			<p>
+			  <a href="https://github.com/AllenBrainAtlas/visweek-2013-contest">https://github.com/AllenBrainAtlas/visweek-2013-contest</a>
+			</p>
+			<p>
+			  The github source code also contains a helpful script or demonstrating how to read the ontology, how to parse gene meta data, and perform other useful tasks.  It is recommended to use this code as a starting point for getting a better understanding of the data set.
+			</p>
+
+			<h4> Interpreting the Data Set </h4>
+
+			<p>
+			  When you download the data set, you will find a set of directories:
+			</p>
+
+			<ul>
+			  <li><tt>energy/</tt> a directory full of expression energy Meta images, one for each probe in 6 development stages chosen for this contest.</li>
+			  <li><tt>meta/</tt> a directory containing meta data on probes (data_sets.csv) and structures (structures.csv).</li>
+			  <li><tt>atlas/</tt> a directory containing reference atlas volumes, one for each developmental stage.</li>
+			  <li><tt>annotation/</tt> a directory containing grid annotation volumes, one for each developmental stage. Voxel values are structure ids.</li>
+			  <li><tt>structure_unionizes/</tt> a directory containing one CSV per probe. Each CSV contains a set of rows describing the expression energy for a probe within an entire structure.</li>
+			</ul>
+			
+			<p>
+			  <tt>meta/data_sets.csv</tt> is the index for all of the volume data sets.  Each row is a probe for one developmental stage (reference space), and the columns describe which gene and development stage (reference space) the probe targets.  <tt>meta/structures.csv</tt> lists all of the structures in the ontology as well as their hierarchical relationship.  Each structure row has a <tt>structure_database_id_path</tt> column that describes the lineage of the structure all the way back to the root.  
+			</p>
+
+			<p>
+			  Because all of the gene expression energy volumes are MHDs, you can open them in <a href="http://www.paraview.org">ParaView</a>.  You can open an energy volume and its associated reference atlas volume or annotation volume and they should align.  You may notice that energy only covers slightly more than one hemisphere of the brain -- this was intentional.  <b>Only one hemisphere was sectioned for ISH treatment</b>.
+			</p>
+
+		  </section>
+
+		  <section id="news">
+			<div class="page-header">
+			  <h3>News and Updates</h3>
+			</div>
+			<p> 
+			  When this page changes we'll update this section and notify email addresses registered with the change notification widget on the left.  
+There will also be a FAQ 
+in this section as necessary.
+			</p>
+			<ul>
+			  <li>
+			   	<h5>July 1, 2013 - A new time point </h5>
+				
+				<p>
+				  The Allen Institute has reprocessed the developing mouse atlas.  It has been packaged for the contest and you can download it with the instructions in the <a href='#download'>Download</a> section.  The big difference is the addition of a P28 time point, which has the same structural annotation ontology as the rest of the time points.  
+				</p>
+				<p>
+				 The Institute has also reannoated the P56 time point with a matching ontology, however the P56 imaging modality is different from the other time points and the expression energy values are scaled differently.  To keep things simple, I'm leaving out P56.  If you're curious and want to know how to download it, contact the mailing list. 
+				</p>
+				
+				<p>
+				  Participants should feel no pressure to try out the new data set, although new participants are recommended to use the latest and greatest.
+				</p>
+			  </li>
+                          <li>
+				<h5>April 2, 2013 - Extra unionizes? </h5>
+				
+				<p>
+				  Several participants have noticed that there are a large number of files in the structure_unionizes directory
+				  that have no corresponding data sets.  That is correct, and it is an error.  
+				</p>
+
+				<p>
+				  If you read the note below, you'll remember that we are in the process of re-annotating this data set for release
+				  in June.  As it turns out, some of that data has already been published, and I inadvertently included it in
+				  the unionize directory.
+				</p>
+
+				<p>
+				  <b>Summary:</b> disregard all unionize files that do not have corresponding data sets in the data_sets directory.
+				  Sorry for the confusion!
+				</p>
+                          </li>
+			  <li>
+				<h5>February 26, 2013 - How do you interpret categories?</h5>
+				
+				<p> 
+				  The gene categories in this data set come from the <a href="http://www.pantherdb.org">PANTHER</a> gene database.
+				  When you look at the classifications column in <tt>data_sets.csv</tt>, you'll see a forward-slash-delimited set
+				  of classification names.  A single data set can be associated with more than one category.  	
+				</p>   
+    				<p>
+				  The Allen Institute periodically refreshes the gene categories in its internal database.  The gene categories were
+				  updated just before version 2 of the data set was released (see comment below), so you'll see a slightly larger
+				  number of categories in the new data set (32).
+				</p>
+			  </li>
+			  <li>
+				<h5>January 25, 2013 - Disregard the P56 Time Point</h5>
+
+				<p>
+				  A participant has kindly notified us that there is a problem with the P56 time point.  If you look at the ID numbers in the P56 
+				  annotation volume (<tt>annotation/annotation_10.mhd</tt>), you'll see that it has a totally different set of structure IDs than the other 
+				  time points, and these IDs are not contained in <tt>meta/structures.csv</tt>.  These structure IDs are from a different atlas (the
+				  Allen Institute's adult mouse gene expression atlas).  <b>The P56 structure IDs cannot be used for the developing mouse contest data</b>.
+				</p>
+				<p>
+				  We appologize for this error, and are working to fix it.  For now, we've released a second version of the data set that does not 
+				  have the P56 time point.  If you browse the data set from the SDSC cloud storage link, you'll see it now contains a new directory
+				  <tt>data_v2</tt>, which does not contain the P56 time point. We've updated the <a href="#download">download instructions</a> accordingly. 
+				</p>
+				<p>
+				  The Allen Institute is planning to release an updated version of the developing mouse atlas in June of this year.  The gene expression 
+				  volumes will remain largely unchanged, however the ontology is being overhauled.  This means new structure names, new structure IDs,
+				  and new annotation volumes.  The P56 time point is being re-annotated to use the same ontology as the other developmental time points.
+				</p>
+				<p>
+				  We would love to see how your visualization technique applies to all 6 refreshed time points!  However, we understand that 2 major 
+				  data set changes is a hassle, so <b>we only ask that your submissions work on one of the released data sets</b>.  If you would like to
+				  "future-proof" your code, avoid hard-coding file names and structure IDs as much as possible.
+				</p>
+				<p>
+				  Thank you for your patience.  Again we appologize for the error.
+				</p>
+
+			  </li>
+			  <li>
+				<h5>January 9, 2013</h5> 
+				<p>VisWeek has been officially renamed to VIS.  The page has been updated accordingly.</p>
+			  </li>
+			  <li>
+				<h5>January 2, 2013</h5>
+				<p>
+				  Updated the awards list to include magazine article submission.  Contact emails are correct now.  Updated terms of 
+				  use in the data description. 
+				</p>
+			  </li>
+			</ul>
+		  </section>
+
+		  <section id="submission">
+			<div class="page-header">
+			  <h3>Submission</h3>
+			</div>
+
+			  <h4>Important dates</h4>
+			  <ul>
+				<li>Deadline:  2 September 2013</li>
+				<li>Notification:  24 September 2013</li>
+				<li>VIS Conference:  October 2013</li>
+			  </ul>
+
+			  <h4>Requirements of the winning team</h4>
+			  <ul>
+				<li>Participation at the conference (note, one registration is free)</li>
+				<li>A short talk during the plenary session</li>
+				<li>A poster of the work for the poster session</li>
+			  </ul>
+
+			  <h4>Rules</h4>
+			  <ul>
+				<li>The contest is open to everyone except contest organizers and judges. Sponsors can participate non-competitive. We invite submissions from individuals or teams, from industry or academia.</li>
+				<li>Submissions must be formatted according to the guidelines below, otherwise we reserve the right to disregard it.</li>
+			  </ul>
+
+			  <h4>Requirements for submissions</h4>
+			  <p>To demonstrate your approach, you are expected to submit:</p>
+			  <ul>
+				<li>A 2-page mini-paper in PDF format describing your visualization and analysis techniques.</li>
+				<li>Up to 12 additional images (beyond those in the paper) showing how the visualizations help answering the questions. The images should be appended to the 2-page document (thus, your whole pdf document should have more than 2 pages). You are invited to use captions in order to explain your images.</li>
+				<li>An MPEG, AVI, or Quicktime video (duration at most 10 minutes) showing the methods or processes in action. This will be most 
+helpful for demonstrating the effectiveness of the proposed methods. You have the opportunity to submit 2 videos: one high-quality video for the review process and 
+one compressed video (up to 50 MB) for the electronic proceedings of the IEEE VIS 2013.</li>
+				<li>Visit http://www.cs.sfu.ca/~vis/Tasks/camera.html for a summary of the formatting guidelines of the manuscript.</li>
+				<li>You may make your paper and video anonymous. However, in that case we will not make it publicly available. Otherwise, your 
+submission will be published on our webpage and in the electronic proceedings of the IEEE VIS 2013</li>
+				<li>We reserve the right to exclude submissions that are of bad quality, that are not useful in any part, or that do not adhere to the guidelines and requirements set forth here.</li>
+				<li>The 2-page write-up should not try to give any background information, which will probably be the same for each contestant anyway. Instead, we would like to learn the important information on what novel visualization ideas you have come up with, how the visualizations were created, what insights scientists might be able to gain from your visualizations, etc.</li>
+				<li>We will not be running any software as part of the evaluations. Instead, your paper, images, and videos should convey everything we should know about your work.</li>
+
+			  </ul>
+			  
+			  <h4>Submission procedure</h4>
+			  <ul>
+				<li>The PDF document and the video should be compressed as one single ZIP archive. No password, please! Please use the following naming convention: university name, initials of first two authors. Example: if your university name is "Clausthal", and the first two authors have the initials GZ and JF, then the file name should be clausthal_gz_jk.zip.</li>
+				<li>The ZIP archive file has to be uploaded via anonymous FTP at the following server: ftp://ftp.sdsc.edu/incoming/viscontest</li>
+				<li>Once you have submitted your entry, send us an email (see Contact page) and we will confirm your submission.</li>
+				<li>Please note that only committee members can view the submissions at the FTP server!</li>
+			  </ul>
+		  </section>
+
+		  <section id="awards">
+			<div class="page-header">
+			  <h3>Awards</h3>
+			</div>
+
+			<p>The winning team will receive:</p>
+			<ul>
+                          <li>Opportunity to submit a full length manuscript via fast track review to a reputable magazine.</li>
+			  <li>One free full registration for the VIS 2013 conference.</li>
+			  <li>A 10 minute slot during the award ceremony in the plenary session.</li>
+			  <li>Award certificate for each member of the winning team.</li>
+			  <li>Opportunity to present the work at the poster session.</li>
+			</ul>
+
+			<h4>Runner-ups</h4>
+
+			<p>Depending on the number of submissions and the reviews, honorable mentions will be awarded. The honorable-mention teams will receive award certificates for each team member.</p>
+
+			<h4>Publications</h4>
+
+			<p> All submissions will be published in the electronic proceedings of the IEEE VIS 2013. We reserve the right to exclude submissions which 
+are of bad quality and which are not useful in any part. </p>
+
+		  </section>
+
+		  <section id="contact">
+			<div class="page-header">
+			  <h3>Contact</h3>
+			</div>
+
+			<p> 
+			  You can always contact the chairs at this email address: scivis_contest ieeevis org.  Questions appropriate for all contest participants can 
+go here: scivis_contest_participants ieeevis org. If you would like to join the participants mailing list, just email one of the two mailing lists.
+	        </p>
+			<p>
+			  If you have any questions about the data, submission procedure, or anything else, please do not hesitate to contact us.
+			</p>
+
+			<p><b>Chair:</b> Gabriel Zachmann, University of Bremen, Germany</p>
+
+			<p><b>Co-Chair:</b> David Feng, Allen Institute for Brain Science. davidf alleninstitute org</p>
+		
+			<div class="page-header">
+			  <h3>Acknowledgements</h3>
+			</div>
+			<p>
+			  Web and data hosting is provided by courtesy of SDSC. Thanks a lot to Amit Chourasia and Jan Klein, SciVis Contest Advisors, for their continuous support.
+			</p>
+		  </section>
+		</div> <!-- span9 -->
+	  </div> <!-- row -->
+	  <div class="row-fluid">
+		<div class="span12 footer">
+		  <p>
+			© David Feng and Gabriel Zachmann. <br/>
+			Web & data hosting courtesy of SDSC. <br/>
+			Last update: July 1, 2013
+		  </p>
+		</div>
+	  </div>
+	</div> <!-- container -->
+    <!-- Le javascript
+		 ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery-1.8.2.min.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/jquery.countdown.min.js"></script>
+    <script src="../assets/js/application.js"></script>
+  </body>
+</html>
