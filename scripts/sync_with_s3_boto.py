@@ -91,12 +91,12 @@ def check_if_git_is_clean():
 ##############################################################################
    
 try:
-    # git_branch_name = sys.argv[1]
-    target_bucket_name = sys.argv[1]
+    git_branch_name = sys.argv[1]
+    target_bucket_name = sys.argv[2]
     target_bucket = 's3://%s/' % target_bucket_name
     debug=True
 except IndexError:
-    print "Expected s3 bucket"
+    print "Expected branch and s3 bucket to be parameters 1 and 2"
     print "Instead, got %s" % str(sys.argv[1:])
     exit(1)
 
